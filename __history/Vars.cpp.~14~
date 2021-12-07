@@ -1,0 +1,177 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "publicf.h"
+
+#include "Vars.h"
+#include "Main.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "ieview"
+#pragma link "imageenview"
+#pragma link "RzButton"
+#pragma link "RzEdit"
+#pragma link "RzPanel"
+#pragma link "RzTabs"
+#pragma link "AdvEdit"
+#pragma link "RzRadChk"
+#pragma link "RzCmboBx"
+#pragma link "AeroButtons"
+#pragma link "hyiedefs"
+#pragma link "hyieutils"
+#pragma link "iesettings"
+#pragma link "iexBitmaps"
+#pragma link "AdvOfficeButtons"
+#pragma link "iexRulers"
+#pragma resource "*.dfm"
+TFVars *FVars;
+//---------------------------------------------------------------------------
+__fastcall TFVars::TFVars(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+void __fastcall TFVars::btnSaveClick(TObject *Sender)
+{
+
+
+
+
+	AnsiString strSQL = "UPDATE vars SET logo = :blobImage ";
+	strSQL = strSQL + ",name1='" + txtName1->Text.Trim();
+	strSQL = strSQL + "',name2='" + txtName2->Text.Trim();
+	strSQL = strSQL + "',name3='" + txtName3->Text.Trim();
+	strSQL = strSQL + "' WHERE id=1";
+
+
+	  TMemoryStream *stImage = new TMemoryStream();
+	  if(ImageEnView1->IsEmpty2)
+	  {
+		stImage->Clear();
+	  }
+	  else
+	  {
+		ImageEnView1->IO->SaveToStreamPNG(stImage);
+	  }
+
+	try
+	{
+
+		TLiteConnection *connDB = new TLiteConnection(Application);
+
+		connDB->Database = FMain->DataFile;
+		connDB->Options->Direct = true;
+		connDB->Options->UseUnicode = true;
+		connDB->Connected = true;
+		TLiteQuery *stdQ = new TLiteQuery(NULL);
+		stdQ->Connection = connDB;
+		stdQ->LockMode = lmOptimistic;
+		stdQ->CheckMode = cmRefresh;
+		stdQ->SQL->Text = strSQL;
+		stdQ->ParamByName("blobImage")->LoadFromStream(stImage,ftBlob);
+		stdQ->ExecSQL();
+		stdQ->Close();
+		connDB->Close();
+
+
+	}catch(Exception *e)
+	{
+		ShowMessage(e->Message);
+	}
+
+	ShowMessageA(" „ «·Õ›Ÿ »‰Ã«Õ");
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFVars::FormShow(TObject *Sender)
+{
+
+	AnsiString strSQL = "SELECT * FROM vars WHERE id=1";
+	TLiteConnection *connDB = new TLiteConnection(NULL);
+	TLiteQuery *Q = SelectQ(strSQL,connDB);
+	int vDateC = Q->FieldByName("dateC")->AsInteger;
+	txtName1->Text = Q->FieldByName("Name1")->AsAnsiString;
+	txtName2->Text = Q->FieldByName("Name2")->AsAnsiString;
+	txtName3->Text = Q->FieldByName("Name3")->AsAnsiString;
+	if(vDateC == 1) rbHijri->Checked = true;
+	if(vDateC == 2) rbGreg->Checked = true;
+
+	if(Q->FieldByName("logo")->IsNull == false)
+	{
+		TStream *stImage = Q->CreateBlobStream((TBlobField *) Q->FieldByName("logo"),bmRead);
+		ImageEnView1->IO->LoadFromStreamPNG(stImage);
+	}
+	cmbCalendarType->Value = Q->FieldByName("dateSystem")->AsAnsiString;
+
+		Q->Close();
+		connDB->Close();
+
+	oldName1 = txtName1->Text;
+	oldName2 = txtName2->Text;
+	oldName3 = txtName3->Text;
+	oldDateC = AnsiString(vDateC);
+	oldSystemDate = cmbCalendarType->Value;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFVars::btnGetImageClick(TObject *Sender)
+{
+	if(OpenPictureDialog1->Execute())
+	{
+		ImageEnView1->IO->LoadFromFileAuto(OpenPictureDialog1->FileName);
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFVars::btnDeleteImageClick(TObject *Sender)
+{
+	ImageEnView1->Clear();
+	ImageEnView1->Blank();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFVars::btnExitClick(TObject *Sender)
+{
+	Close();
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TFVars::btnSave2Click(TObject *Sender)
+{
+
+ 		AnsiString tt = cmbCalendarType->Value;
+		const char *a = tt.c_str() ;
+		const char *b = "yyyy/MM/dd";
+		SetLocaleInfo(GetUserDefaultLCID(),LOCALE_ICALENDARTYPE,a);
+		SetLocaleInfo(GetUserDefaultLCID(),LOCALE_SSHORTDATE,b);
+		SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, 0);
+
+
+
+
+
+	AnsiString vDateC = "1";
+	if(rbHijri->Checked == true) vDateC = "1";
+	if(rbGreg->Checked == true) vDateC = "2";
+
+
+	AnsiString vArcSGIndexes  = "0";
+	if(chkArcSGIndexes->Checked == true)
+	{
+		vArcSGIndexes  = "1";
+    }
+
+
+	AnsiString strSQL = "UPDATE vars SET dateC=" + vDateC;
+	strSQL = strSQL + ",dateSystem=" + cmbCalendarType->Value;
+	strSQL = strSQL + ",ArcSGIndexes=" + vArcSGIndexes;
+	strSQL = strSQL + " WHERE id=1";
+     ShowMessage(strSQL) ;
+	CommandSQL(strSQL);
+    ShowMessageA(" „ «·Õ›Ÿ »‰Ã«Õ");
+}
+//---------------------------------------------------------------------------
+

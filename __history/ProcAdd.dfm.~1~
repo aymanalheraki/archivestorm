@@ -1,0 +1,85 @@
+object FProcAdd: TFProcAdd
+  Left = 0
+  Top = 0
+  BiDiMode = bdRightToLeft
+  BorderStyle = bsDialog
+  Caption = #1573#1590#1575#1601#1577' '#1573#1580#1585#1575#1569' '#1604#1604#1608#1579#1610#1602#1577
+  ClientHeight = 171
+  ClientWidth = 408
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  ParentBiDiMode = False
+  Position = poMainFormCenter
+  DesignSize = (
+    408
+    171)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RzGroupBox1: TRzGroupBox
+    Left = 7
+    Top = 6
+    Width = 393
+    Height = 131
+    TabOrder = 0
+    object Label2: TLabel
+      Left = 321
+      Top = 13
+      Width = 56
+      Height = 13
+      BiDiMode = bdRightToLeft
+      Caption = #1608#1589#1601' '#1575#1604#1575#1580#1585#1575#1569
+      Color = clBtnFace
+      Font.Charset = ARABIC_CHARSET
+      Font.Color = clMaroon
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Pitch = fpFixed
+      Font.Style = []
+      ParentBiDiMode = False
+      ParentColor = False
+      ParentFont = False
+    end
+    object txtprocDesc: TRzMemo
+      Left = 14
+      Top = 30
+      Width = 364
+      Height = 86
+      MaxLength = 245
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+  end
+  object btnSave: TAeroButton
+    Left = 78
+    Top = 141
+    Width = 71
+    Height = 28
+    ImageIndex = 0
+    Images = FMain.ImageList3
+    ImagePos = ipRight
+    Version = '1.0.0.1'
+    Anchors = [akTop, akRight]
+    Caption = #1581#1601#1592
+    TabOrder = 1
+    OnClick = btnSaveClick
+  end
+  object btnExit: TAeroButton
+    Left = 5
+    Top = 141
+    Width = 71
+    Height = 28
+    ImageIndex = 3
+    Images = FMain.ImageList3
+    ImagePos = ipRight
+    Version = '1.0.0.1'
+    Anchors = [akTop, akRight]
+    Caption = #1573#1604#1594#1575#1569
+    TabOrder = 2
+    OnClick = btnExitClick
+  end
+end

@@ -1,0 +1,52 @@
+object Fwait: TFwait
+  Left = 0
+  Top = 0
+  BiDiMode = bdRightToLeft
+  BorderStyle = bsNone
+  Caption = 'Fwait'
+  ClientHeight = 108
+  ClientWidth = 281
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  ParentBiDiMode = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RzPanel1: TRzPanel
+    Left = 0
+    Top = 0
+    Width = 281
+    Height = 108
+    Align = alClient
+    BorderInner = fsFlatRounded
+    BorderOuter = fsGroove
+    TabOrder = 0
+    ExplicitLeft = 56
+    ExplicitTop = 24
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object lblWait: TRzLabel
+      Left = 19
+      Top = 44
+      Width = 241
+      Height = 18
+      Alignment = taCenter
+      AutoSize = False
+      Caption = '<<<<<< '#1575#1606#1578#1592#1585' >>>>>>'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -15
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      Blinking = True
+      BlinkColor = clMaroon
+    end
+  end
+end
