@@ -65,8 +65,8 @@ void __fastcall TFUsersForm::FormCreate(TObject *Sender)
 	UsersSG->FixedRows = 1;
 
 
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strSql,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strSql,connDB);
 
 
 	SendMessage(UsersSG->Handle, WM_SETREDRAW, FALSE, 0);
@@ -147,8 +147,8 @@ void __fastcall TFUsersForm::UsersSGClick(TObject *Sender)
 		UserID = UsersSG->Cells[0][UsersSG->Row];
 
 		AnsiString strSql = "Select * FROM usersperm WHERE permUserID = " + UserID;
-		TLiteConnection *connDB = new TLiteConnection(NULL);
-		TLiteQuery *Q = SelectQ(strSql,connDB);
+		TFDConnection *connDB = new TFDConnection(NULL);
+		TFDQuery *Q = SelectQ(strSql,connDB);
 
 		chkUsers->Checked = Q->FieldByName("permUsers")->AsInteger;
 		chkVars->Checked = Q->FieldByName("permVars")->AsInteger;

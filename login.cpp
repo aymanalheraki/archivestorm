@@ -28,8 +28,8 @@ void __fastcall TFlogin::btnLogInClick(TObject *Sender)
 		strS = strS + "' AND userLogPassword='" + txtUserPassword->Text.Trim();
 		strS = strS + "' AND userActive=1";
 
-		TLiteConnection *connDB = new TLiteConnection(NULL);
-		TLiteQuery *Qc = SelectQ(strS,connDB);
+		TFDConnection *connDB = new TFDConnection(NULL);
+		TFDQuery *Qc = SelectQ(strS,connDB);
 
 			if (Qc->RecordCount > 0)
 			{
@@ -39,7 +39,7 @@ void __fastcall TFlogin::btnLogInClick(TObject *Sender)
 
 				AnsiString strSql = "SELECT * FROM UsersPerm WHERE permUserID = " + FMain->vUserID;
 
-				TLiteQuery *Q = SelectQ(strSql,connDB);
+				TFDQuery *Q = SelectQ(strSql,connDB);
 
 
 				FMain->vPermUsers = Q->FieldByName("permUsers")->AsInteger;
@@ -122,8 +122,8 @@ void __fastcall TFlogin::FormShow(TObject *Sender)
 		txtUserID->Text = ReadRegistry("arcUserID");
 		AnsiString strS = "Select * From users WHERE userLogID='" + txtUserID->Text.Trim() + "' AND userActive=1";
 
-		TLiteConnection *connDB = new TLiteConnection(NULL);
-		TLiteQuery *Qc = SelectQ(strS,connDB);
+		TFDConnection *connDB = new TFDConnection(NULL);
+		TFDQuery *Qc = SelectQ(strS,connDB);
 			if(Qc->RecordCount > 0)
 			{
 				if(Qc->FieldByName("userLogPassword")->AsAnsiString == "admin")

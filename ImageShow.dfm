@@ -13,7 +13,6 @@ object FImageShow: TFImageShow
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poDesktopCenter
   WindowState = wsMaximized
@@ -28,13 +27,12 @@ object FImageShow: TFImageShow
     Height = 439
     Cursor = crArrow
     Background = clBtnFace
-    Ctl3D = False
-    ParentCtl3D = False
     LegacyBitmap = True
     SelectionOptions = [iesoCanScroll]
-    MouseInteract = [miZoom, miScroll]
-    AutoFit = True
+    MouseInteractGeneral = [miZoom, miScroll]
     DelayZoomFilter = True
+    AutoStretch = True
+    AutoShrink = True
     EnableInteractionHints = False
     Align = alClient
     TabOrder = 0
@@ -107,7 +105,7 @@ object FImageShow: TFImageShow
       Height = 25
       ImageIndex = 3
       Images = ImageList1
-      Version = '1.0.0.1'
+      Version = '1.0.0.2'
       Caption = 'Print'
       TabOrder = 0
       OnClick = btnPrintClick
@@ -119,7 +117,7 @@ object FImageShow: TFImageShow
       Height = 25
       ImageIndex = 6
       Images = ImageList1
-      Version = '1.0.0.1'
+      Version = '1.0.0.2'
       Caption = 'Image Export'
       TabOrder = 1
       OnClick = btnSaveAsClick
@@ -157,15 +155,6 @@ object FImageShow: TFImageShow
     end
   end
   object SaveImageEnDialog1: TSaveImageEnDialog
-    Filter = 
-      'JPEG Bitmap (JPG)|*.jpg|CompuServe Bitmap (GIF)|*.gif|TIFF Bitma' +
-      'p (TIF)|*.tif|PaintBrush (PCX)|*.pcx|Portable Network Graphics (' +
-      'PNG)|*.png|Windows Bitmap (BMP)|*.bmp|OS/2 Bitmap (BMP)|*.bmp|Ta' +
-      'rga Bitmap (TGA)|*.tga|Portable PixMap (PXM)|*.pxm|Portable PixM' +
-      'ap (PPM)|*.ppm|Portable GreyMap (PGM)|*.pgm|Portable Bitmap (PBM' +
-      ')|*.pbm|JPEG2000 (JP2)|*.jp2|JPEG2000 Code Stream (J2K)|*.j2k|Mu' +
-      'ltipage PCX (DCX)|*.dcx'
-    ExOptions = [sdShowPreview, sdShowAdvanced]
     Left = 408
     Top = 249
   end
@@ -173,7 +162,7 @@ object FImageShow: TFImageShow
     Left = 272
     Top = 313
     Bitmap = {
-      494C01010800E000D00010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010800E000040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000003000000001002000000000000030
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

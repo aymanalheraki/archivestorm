@@ -22,6 +22,11 @@
 #pragma link "iesettings"
 #pragma link "iexBitmaps"
 #pragma link "iexRulers"
+#pragma link "iexLayers"
+#pragma link "iexToolbars"
+#pragma link "iexUserInteractions"
+#pragma link "imageenio"
+#pragma link "imageenproc"
 #pragma resource "*.dfm"
 TFImageShow *FImageShow;
 //---------------------------------------------------------------------------
@@ -33,8 +38,8 @@ __fastcall TFImageShow::TFImageShow(TComponent* Owner)
 void __fastcall TFImageShow::FormShow(TObject *Sender)
 {
 		AnsiString strSql = "Select * FROM addImages WHERE imageID = " + imageID;
-		TLiteConnection *connDB = new TLiteConnection(NULL);
-		TLiteQuery *stdQ = SelectQ(strSql,connDB);
+		TFDConnection *connDB = new TFDConnection(NULL);
+		TFDQuery *stdQ = SelectQ(strSql,connDB);
 
 		if(stdQ->RecordCount > 0)
 		{

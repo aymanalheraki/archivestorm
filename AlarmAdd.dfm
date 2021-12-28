@@ -11,14 +11,13 @@ object FAlarmAdd: TFAlarmAdd
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poOwnerFormCenter
   OnCreate = FormCreate
   OnShow = FormShow
+  PixelsPerInch = 96
   DesignSize = (
     254
     181)
-  PixelsPerInch = 96
   TextHeight = 13
   object RzGroupBox1: TRzGroupBox
     Left = 16
@@ -57,7 +56,7 @@ object FAlarmAdd: TFAlarmAdd
     Height = 28
     ImageIndex = 0
     Images = ImageList3
-    Version = '1.0.0.1'
+    Version = '1.0.0.2'
     Anchors = [akTop, akRight]
     Caption = 'Save'
     TabOrder = 1
@@ -70,7 +69,7 @@ object FAlarmAdd: TFAlarmAdd
     Height = 28
     ImageIndex = 2
     Images = ImageList3
-    Version = '1.0.0.1'
+    Version = '1.0.0.2'
     Anchors = [akTop, akRight]
     Caption = 'Cancel'
     TabOrder = 2
@@ -83,7 +82,7 @@ object FAlarmAdd: TFAlarmAdd
     Height = 28
     ImageIndex = 3
     Images = ImageList3
-    Version = '1.0.0.1'
+    Version = '1.0.0.2'
     Anchors = [akTop, akRight]
     Caption = 'Remove Alarm'
     TabOrder = 3
@@ -94,6 +93,11 @@ object FAlarmAdd: TFAlarmAdd
     Top = 64
     Width = 226
     Height = 70
+    CaptionFont.Charset = DEFAULT_CHARSET
+    CaptionFont.Color = clWindowText
+    CaptionFont.Height = -12
+    CaptionFont.Name = 'Segoe UI'
+    CaptionFont.Style = []
     BiDiMode = bdLeftToRight
     Caption = 'Alarm Time'
     ParentBiDiMode = False
@@ -122,11 +126,10 @@ object FAlarmAdd: TFAlarmAdd
       ParentDoubleBuffered = False
       ParentFont = False
       TabOrder = 0
-      TabStop = True
       BorderStyle = bsSingle
       Ctl3D = True
       DateTime = 41265.000000000000000000
-      Version = '1.3.0.0'
+      Version = '1.3.6.2'
       LabelPosition = lpRightCenter
       LabelFont.Charset = DEFAULT_CHARSET
       LabelFont.Color = clMaroon
@@ -139,7 +142,7 @@ object FAlarmAdd: TFAlarmAdd
     Left = 4
     Top = 62
     Bitmap = {
-      494C0101040008007C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010104000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

@@ -9,20 +9,18 @@ AnsiString StringToHex(char *s) {
 	return result;
 }
 
-TLiteQuery* SelectQ(AnsiString strSql,TLiteConnection *connDB)
+TFDQuery* SelectQ(AnsiString strSql,TFDConnection *connDB)
 {
 	try
 	{
-		connDB->Database = FMain->DataFile;
-		connDB->Options->Direct = true;
-		connDB->Options->UseUnicode = true;
-		connDB->Connected = true;
-		TLiteQuery *stdQ = new TLiteQuery(NULL);
+		connDB->DriverName = "Sqlite";
+		connDB->Params->Values["Database"] = FMain->DataFile;
+
+		connDB->Open();
+		TFDQuery *stdQ = new TFDQuery(NULL);
 		stdQ->Connection = connDB;
-		stdQ->LockMode = lmOptimistic;
-		stdQ->Options->QueryRecCount = true;
 		stdQ->SQL->Text = strSql;
-		stdQ->ExecSQL();
+		stdQ->Open();
 
 		return stdQ;
 
@@ -39,18 +37,14 @@ long int CommandSQL(AnsiString strSql)
 	try
 	{
 
-		TLiteConnection *connDB1 = new TLiteConnection(NULL);
-		connDB1->Database = FMain->DataFile;
-		connDB1->Options->Direct = true;
-		connDB1->Options->UseUnicode = true;
-		connDB1->Connected = true;
-		TLiteQuery *stdQ = new TLiteQuery(NULL);
-		stdQ->Connection = connDB1;
-		stdQ->LockMode = lmPessimistic;
-		stdQ->CheckMode = cmRefresh;
+		TFDConnection *connDB = new TFDConnection(NULL);
+		connDB->DriverName = "Sqlite";
+		connDB->Params->Values["Database"] = FMain->DataFile;
+		connDB->Open();
+		TFDQuery *stdQ = new TFDQuery(NULL);
+		stdQ->Connection = connDB;
 		stdQ->SQL->Text = strSql;
 		stdQ->ExecSQL();
-
 
 		stdQ->SQL->Text = "SELECT LAST_INSERT_ROWID() AS rowid";
 		stdQ->Open();
@@ -60,9 +54,8 @@ long int CommandSQL(AnsiString strSql)
 			clID = stdQ->FieldByName("rowid")->AsLargeInt;
 		}
 
- //		long int clID = stdQ->LastInsertId;
-		connDB1->Connected = false;
-		return clID;
+		connDB->Connected = false;
+	   	return clID;
 	   }
 	   catch(Exception *e)
 	  {
@@ -421,8 +414,8 @@ AnsiString GetTime(TDateTime Today) {
 
 int GetDBcount(AnsiString str1)
 {
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(str1, connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(str1, connDB);
 	int sss = Q->RecordCount;
 	connDB->Close();
 	return sss;
@@ -432,9 +425,9 @@ int GetDBcount(AnsiString str1)
 
 int getDBFieldID(AnsiString str1, AnsiString fName)
 {
-	TLiteConnection *connDB = new TLiteConnection(NULL);
+	TFDConnection *connDB = new TFDConnection(NULL);
 	int fID;
-	TLiteQuery *Q = SelectQ(str1,connDB);
+	TFDQuery *Q = SelectQ(str1,connDB);
 	try
 	{
 		fID = Q->FieldByName(fName)->AsInteger;
@@ -451,9 +444,9 @@ int getDBFieldID(AnsiString str1, AnsiString fName)
 
 int getLastID(AnsiString str1,AnsiString fName)
 {
-	TLiteConnection *connDB = new TLiteConnection(NULL);
+	TFDConnection *connDB = new TFDConnection(NULL);
 	int fID;
-	TLiteQuery *Q = SelectQ(str1, connDB);
+	TFDQuery *Q = SelectQ(str1, connDB);
 	try
 	{
 		fID = Q->FieldByName(fName)->AsInteger;
@@ -477,8 +470,8 @@ void ShowMessageA(UnicodeString str1)
 
 void ComboFillA(TRzComboBox *aa, AnsiString strSQL, AnsiString item1,AnsiString value1, bool a1)
 {
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Qcmb = SelectQ(strSQL, connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Qcmb = SelectQ(strSQL, connDB);
 	aa->Items->Clear();
 
 	if(Qcmb->RecordCount > 0)
@@ -503,8 +496,8 @@ void ComboFillA(TRzComboBox *aa, AnsiString strSQL, AnsiString item1,AnsiString 
 // -----------------------------------------------------------------------
 void ComboFillB(TRzComboBox *aa, AnsiString strSQL, AnsiString item1,AnsiString value1, bool a1)
 {
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Qcmb = SelectQ(strSQL, connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Qcmb = SelectQ(strSQL, connDB);
 	aa->Items->Clear();
 
 	if (Qcmb->RecordCount > 0) {
@@ -527,8 +520,8 @@ void ComboFillB(TRzComboBox *aa, AnsiString strSQL, AnsiString item1,AnsiString 
 // ----------------------------------------------------------------------------------
 void ComboFill(TRzComboBox *aa, AnsiString strSQL, AnsiString item1,AnsiString value1)
 {
-    TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Qcmb = SelectQ(strSQL, connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Qcmb = SelectQ(strSQL, connDB);
 	aa->Items->Clear();
 
 	if (Qcmb->RecordCount > 0) {
@@ -1144,8 +1137,8 @@ AnsiString FormatByteSize(long double bytes)
 AnsiString getUserID(AnsiString strCivilCard)
 {
 	AnsiString str1 = "SELECT userID FROM users WHERE userLogID = '" + strCivilCard + "'";
-    TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(str1, connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(str1, connDB);
 	if (Q->RecordCount > 0)
 	{
 		AnsiString ID = Q->FieldByName("userID")->AsString;
@@ -1161,8 +1154,8 @@ AnsiString checkUserInCommMembers(AnsiString strCivilCard, AnsiString commID)
 	AnsiString str1 = "SELECT users.userLogID FROM meetingCommMembers ";
 	str1 += "LEFT JOIN users ON users.userID = meetingCommMembers.userID ";
 	str1 += "WHERE users.userLogID = '" + strCivilCard + "' AND commID=" + commID;
-    TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(str1, connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(str1, connDB);
 	if (Q->RecordCount > 0) {
 		AnsiString ID = Q->FieldByName("userLogID")->AsString;
 		return ID;
@@ -1269,8 +1262,8 @@ TDateTime GetOAToGregDate(AnsiString hd)
 
 	AnsiString d1 = hd.SubString(0,4) + "-" + hd.SubString(7,2) + "-" + hd.SubString(5,2);
    AnsiString sqlStr = " SELECT convert(date,'" + d1 + "', 131) gd FROM users ";
-   TLiteConnection *connDB = new TLiteConnection(NULL);
-   TLiteQuery *Q = SelectQ(sqlStr, connDB);
+   TFDConnection *connDB = new TFDConnection(NULL);
+   TFDQuery *Q = SelectQ(sqlStr, connDB);
    Q->First();
 	TDateTime ddd = Q->FieldByName("gd")->AsDateTime;
 	connDB->Close();
@@ -1281,10 +1274,10 @@ TDateTime GetOAToGregDate(AnsiString hd)
 
 TDateTime GetGregToOADate(AnsiString hd)
 {
-	TLiteConnection *connDB = new TLiteConnection(NULL);
+	TFDConnection *connDB = new TFDConnection(NULL);
 	AnsiString d1 = hd.SubString(0,4) + "-" + hd.SubString(7,2) + "-" + hd.SubString(5,2);
    AnsiString sqlStr = " SELECT convert(date,'" + d1 + "', 131) gd FROM users ";
-   TLiteQuery *Q = SelectQ(sqlStr, connDB);
+   TFDQuery *Q = SelectQ(sqlStr, connDB);
    Q->First();
 	TDateTime ddd = Q->FieldByName("gd")->AsDateTime;
 	connDB->Close();
@@ -1295,12 +1288,12 @@ TDateTime GetGregToOADate(AnsiString hd)
 
 TDateTime GetOAToGregDateTime(AnsiString hd)
 {
-	TLiteConnection *connDB = new TLiteConnection(NULL);
+	TFDConnection *connDB = new TFDConnection(NULL);
 	AnsiString d1 = hd.SubString(7,2) + "-" + hd.SubString(5,2) + "-" + hd.SubString(0,4) + " ";
 			d1 = d1 + hd.SubString(9,2) + ":" + hd.SubString(11,2) + ":" + hd.SubString(13,2);
    AnsiString sqlStr = "SELECT top 1 (Format(convert(datetime,'" + d1 + "', 131),'dd/MM/yyyy HH:MM', 'en-us')) gd FROM users  ";
 
-	TLiteQuery *Q1 = SelectQ(sqlStr, connDB);
+	TFDQuery *Q1 = SelectQ(sqlStr, connDB);
 	TDateTime ddd = Q1->FieldByName("gd")->AsDateTime;
     connDB->Close();
 	return ddd.DateString();
@@ -1310,11 +1303,11 @@ TDateTime GetOAToGregDateTime(AnsiString hd)
 
 TDateTime GetGregToOADateTime(AnsiString hd)
 {
-	TLiteConnection *connDB = new TLiteConnection(NULL);
+	TFDConnection *connDB = new TFDConnection(NULL);
 	AnsiString d1 = hd.SubString(7,2) + "-" + hd.SubString(5,2) + "-" + hd.SubString(0,4) + " ";
 			d1 = d1 + hd.SubString(9,2) + ":" + hd.SubString(11,2) + ":" + hd.SubString(13,2);
    AnsiString sqlStr = "SELECT top 1 (Format(convert(datetime,'" + d1 + "', 131),'dd/MM/yyyy HH:MM', 'ar-sa')) gd FROM users  ";
-   TLiteQuery *Q1 = SelectQ(sqlStr, connDB);
+   TFDQuery *Q1 = SelectQ(sqlStr, connDB);
 
 	TDateTime ddd = Q1->FieldByName("gd")->AsDateTime;
     connDB->Close();
@@ -1324,12 +1317,12 @@ TDateTime GetGregToOADateTime(AnsiString hd)
 
 TDateTime GetDateTime(AnsiString hd)
 {
-    TLiteConnection *connDB = new TLiteConnection(NULL);
+	TFDConnection *connDB = new TFDConnection(NULL);
 	UnicodeString d1 = hd.SubString(0,4) + hd.SubString(5,2) + hd.SubString(7,2) + " ";
 			d1 = d1 + hd.SubString(9,2) + ":" + hd.SubString(11,2) + ":" + hd.SubString(13,2);
    AnsiString sqlStr = "SELECT top 1 CONVERT(varchar, CONVERT(datetime, '" + d1 + "'), 120) gd FROM users  ";
 
-	TLiteQuery *Q1 = SelectQ(sqlStr, connDB);
+	TFDQuery *Q1 = SelectQ(sqlStr, connDB);
 	TDateTime ddd = StrToDateTime(Q1->FieldByName("gd")->AsAnsiString);
     connDB->Close();
 	return ddd.DateTimeString();
@@ -1342,12 +1335,8 @@ void Repaire()
 {
   try
   {
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	connDB->Database = FMain->DataFile;
-	connDB->Options->Direct = true;
-	connDB->Options->UseUnicode = true;
-//	connDB->Options->EncryptionAlgorithm = eaBlowfish;
-//   	connDB->EncryptionKey = "#amsco99";
+	TFDConnection *connDB = new TFDConnection(NULL);
+	connDB->Params->Database = FMain->DataFile;
 	connDB->Open();
 	connDB->ExecSQL("PRAGMA page_size=16384");
 	connDB->ExecSQL("VACUUM");

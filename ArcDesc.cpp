@@ -21,8 +21,8 @@ void __fastcall TFArcDesc::FormShow(TObject *Sender)
 {
 	AnsiString strSql = "Select * FROM arcmain WHERE arcID = " + arcID;
 
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strSql,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strSql,connDB);
 
 	lblArcSubject->Caption = Q->FieldByName("arcSubject")->AsString;
 	txtDesc->Text = Q->FieldByName("arcDesc")->AsString;

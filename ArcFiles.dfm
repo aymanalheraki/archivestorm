@@ -13,7 +13,6 @@ object FArcFiles: TFArcFiles
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -48,7 +47,7 @@ object FArcFiles: TFArcFiles
       DataFloatFormat = '%f'
       DataDateFormat = 'dd/MM/yyyy'
       Separator = ':'
-      Version = '1.0.0.2'
+      Version = '1.0.1.0'
     end
     object RzPanel5: TRzPanel
       Left = 0
@@ -245,7 +244,6 @@ object FArcFiles: TFArcFiles
             Top = 11
             Width = 145
             Height = 19
-            DefaultHandling = True
             EmptyTextStyle = []
             ShowError = True
             LabelPosition = lpRightCenter
@@ -274,7 +272,7 @@ object FArcFiles: TFArcFiles
             Text = ''
             Visible = True
             OnKeyPress = txtImageSearchKeyPress
-            Version = '3.4.2.2'
+            Version = '4.0.1.3'
           end
           object btnExpandAll: TAeroButton
             Left = 20
@@ -285,7 +283,7 @@ object FArcFiles: TFArcFiles
             ImageIndex = 3
             Images = ImageList1
             ImagePos = ipRight
-            Version = '1.0.0.1'
+            Version = '1.0.0.2'
             ParentShowHint = False
             ShowHint = True
             TabOrder = 1
@@ -299,7 +297,7 @@ object FArcFiles: TFArcFiles
             Hint = #1590#1594#1591' '#1588#1580#1585#1577' '#1575#1604#1589#1608#1585
             ImageIndex = 2
             Images = ImageList1
-            Version = '1.0.0.1'
+            Version = '1.0.0.2'
             ParentShowHint = False
             ShowHint = True
             TabOrder = 2
@@ -363,7 +361,6 @@ object FArcFiles: TFArcFiles
               Top = 0
               Width = 928
               Height = 453
-              Cursor = crDefault
               Align = alClient
               BevelInner = bvNone
               BevelOuter = bvNone
@@ -385,11 +382,9 @@ object FArcFiles: TFArcFiles
               ParentDoubleBuffered = False
               ParentFont = False
               ParentShowHint = False
-              ScrollBars = ssBoth
               ShowHint = True
               TabOrder = 0
               ActiveRowColor = 12615808
-              HoverRowCells = [hcNormal, hcSelected]
               OnGetCellColor = fileSGGetCellColor
               OnGetCellCursor = fileSGGetCellCursor
               OnGetAlignment = fileSGGetAlignment
@@ -465,7 +460,6 @@ object FArcFiles: TFArcFiles
               Grouping.MergeHeader = True
               Grouping.ShowGroupCount = True
               HoverButtons.Buttons = <>
-              HoverButtons.Position = hbLeftFromColumnLeft
               HTMLSettings.ImageFolder = 'images'
               HTMLSettings.ImageBaseName = 'img'
               Look = glStandard
@@ -523,13 +517,12 @@ object FArcFiles: TFArcFiles
               SelectionTextColor = clDefault
               ShowModified.Enabled = True
               ShowDesignHelper = False
-              SortSettings.DefaultFormat = ssAutomatic
               SortSettings.HeaderColorTo = 16579058
               SortSettings.HeaderMirrorColor = 16380385
               SortSettings.HeaderMirrorColorTo = 16182488
               SyncGrid.ScrollVertical = True
               VAlignment = vtaCenter
-              Version = '8.2.4.1'
+              Version = '8.6.9.0'
               WordWrap = False
               ColWidths = (
                 91
@@ -598,7 +591,7 @@ object FArcFiles: TFArcFiles
     Left = 272
     Top = 313
     Bitmap = {
-      494C01010400E0004C0110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01010400E000040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

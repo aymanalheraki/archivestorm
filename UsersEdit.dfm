@@ -12,14 +12,13 @@ object FUsersEdit: TFUsersEdit
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poOwnerFormCenter
   OnShow = FormShow
+  PixelsPerInch = 96
   DesignSize = (
     336
     217)
-  PixelsPerInch = 96
   TextHeight = 13
   object RzGroupBox1: TRzGroupBox
     Left = 5
@@ -173,7 +172,7 @@ object FUsersEdit: TFUsersEdit
     Height = 28
     ImageIndex = 0
     Images = ImageList3
-    Version = '1.0.0.1'
+    Version = '1.0.0.2'
     Anchors = [akTop, akRight]
     Caption = 'Save'
     TabOrder = 1
@@ -186,7 +185,7 @@ object FUsersEdit: TFUsersEdit
     Height = 28
     ImageIndex = 1
     Images = ImageList3
-    Version = '1.0.0.1'
+    Version = '1.0.0.2'
     Anchors = [akTop, akRight]
     Caption = 'Cancel'
     TabOrder = 2
@@ -206,7 +205,7 @@ object FUsersEdit: TFUsersEdit
     Left = 288
     Top = 69
     Bitmap = {
-      494C010102000800540010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010102000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       00000000000000000000000000000000000000000000FAFAFA05ECECEC13E3E3
       E31CE2E2E21DE5E5E51AE9E9E916EEEEEE11F4F4F40BFBFBFB04FEFEFE010000

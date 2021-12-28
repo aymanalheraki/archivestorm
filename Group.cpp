@@ -61,8 +61,8 @@ void __fastcall TFGroup::fillmSG()
  {
 
 	AnsiString str1 = "Select * FROM maingroups Order By mgroupID";
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(str1,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(str1,connDB);
 
 	if(Q->RecordCount > 0)
 	{
@@ -117,8 +117,8 @@ void __fastcall TFGroup::fillsSG()
  {
 
 	AnsiString str2 = "Select * FROM subgroups WHERE sgroupMainGroupID = " + mID;
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(str2,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(str2,connDB);
 
 	if(Q->RecordCount > 0)
 	{
@@ -162,8 +162,8 @@ void __fastcall TFGroup::btnSaveMClick(TObject *Sender)
 		return;
 	}
 	AnsiString strS = "SELECT * FROM MainGroups WHERE mgroupName = '" + txtNameM->Text.Trim() + "'";
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strS,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strS,connDB);
 
 
 
@@ -206,8 +206,8 @@ void __fastcall TFGroup::mSGDblClickCell(TObject *Sender, int ARow, int ACol)
 	if(ACol == 2 && ARow > 0 && mSG->GetImageIdx(2,ARow,aa) == true)
 	{
 		AnsiString strS = "SELECT * FROM arcmain WHERE arcMainGroup = " + mID;
-		TLiteConnection *connDB = new TLiteConnection(NULL);
-		TLiteQuery *Q = SelectQ(strS,connDB);
+		TFDConnection *connDB = new TFDConnection(NULL);
+		TFDQuery *Q = SelectQ(strS,connDB);
 
 		if(Q->RecordCount > 0)
 		{
@@ -215,8 +215,8 @@ void __fastcall TFGroup::mSGDblClickCell(TObject *Sender, int ARow, int ACol)
 			return;
 		}
 		AnsiString strS2 = "SELECT * FROM SubGroups WHERE sgroupMainGroupID = " + mID;
-		TLiteConnection *connDB1 = new TLiteConnection(NULL);
-		TLiteQuery *Q1 = SelectQ(strS2,connDB1);
+		TFDConnection *connDB1 = new TFDConnection(NULL);
+		TFDQuery *Q1 = SelectQ(strS2,connDB1);
 
 		if(Q1->RecordCount > 0)
 		{
@@ -294,8 +294,8 @@ void __fastcall TFGroup::btnSaveSClick(TObject *Sender)
 		return;
 	}
 	AnsiString strS = "SELECT * FROM SubGroups WHERE sgroupName = '" + txtNameS->Text.Trim() + "'";
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strS,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strS,connDB);
 
 
 	if(Q->RecordCount > 0)
@@ -334,8 +334,8 @@ void __fastcall TFGroup::sSGDblClickCell(TObject *Sender, int ARow, int ACol)
 	if(ACol == 2 && ARow > 0 && sSG->GetImageIdx(2,ARow,aa) == true)
 	{
 		AnsiString strS = "SELECT * FROM arcmain WHERE arcSubGroup = " + sID;
-		TLiteConnection *connDB = new TLiteConnection(NULL);
-		TLiteQuery *Q = SelectQ(strS,connDB);
+		TFDConnection *connDB = new TFDConnection(NULL);
+		TFDQuery *Q = SelectQ(strS,connDB);
 
 		if(Q->RecordCount > 0)
 		{

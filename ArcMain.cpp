@@ -42,8 +42,8 @@
 #pragma link "fs_iinterpreter"
 #pragma resource "*.dfm"
 TFArcMain *FArcMain;
-TLiteQuery *Q;
-TLiteConnection *connDB;
+TFDQuery *Q;
+TFDConnection *connDB;
 //---------------------------------------------------------------------------
 __fastcall TFArcMain::TFArcMain(TComponent* Owner)
 	: TForm(Owner)
@@ -329,7 +329,7 @@ void __fastcall TFArcMain::FillArcSG()
     }
 
    //	ShowMessage(strS);
-	TLiteConnection *connDB = new TLiteConnection(NULL);
+	TFDConnection *connDB = new TFDConnection(NULL);
 
  //  TDateTime dtS = Now();
 
@@ -423,8 +423,8 @@ void __fastcall TFArcMain::FillProcSG()
 
 
   //	ShowMessage(strS3);
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strS3,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strS3,connDB);
 
 
 	if(Q->RecordCount > 0)
@@ -607,8 +607,8 @@ void __fastcall TFArcMain::arcSGGridHint(TObject *Sender, int ARow, int ACol, Un
 			AnsiString sql1 = "SELECT strftime(arcmain.arcPostDate) as da,u.userFullName AS aUser from arcmain ";
 			sql1 = sql1 + "LEFT JOIN users u on arcmain.userID = u.userID ";
 			sql1 = sql1 + " WHERE arcID = " + arcSG->Cells[0][ARow];
-			TLiteConnection *connDB = new TLiteConnection(NULL);
-			TLiteQuery *Q = SelectQ(sql1, connDB);
+			TFDConnection *connDB = new TFDConnection(NULL);
+			TFDQuery *Q = SelectQ(sql1, connDB);
 			if(Q->RecordCount > 0)
 			{
 				hintstr = "Added : " + Q->FieldByName("aUser")->AsString + "\n"
@@ -781,8 +781,8 @@ ArcPrint->LoadFromStream(resFile);
 
 
 	AnsiString strSql = "SELECT * FROM vars WHERE id=1";
-	TLiteConnection *connDB1 = new TLiteConnection(NULL);
-	TLiteQuery *Q1 = SelectQ(strSql,connDB1);
+	TFDConnection *connDB1 = new TFDConnection(NULL);
+	TFDQuery *Q1 = SelectQ(strSql,connDB1);
 	TStream *picLogo = Q1->CreateBlobStream((TBlobField *) Q1->FieldByName("logo"),bmRead);
 
 
@@ -961,8 +961,8 @@ void __fastcall TFArcMain::ProcSGGridHint(TObject *Sender, int ARow, int ACol, U
 			sql1 = sql1 + "LEFT JOIN users on procmain.userID = users.userID ";
 			sql1 = sql1 + " WHERE procID = " + procID;
 
-			TLiteConnection *connDB1 = new TLiteConnection(NULL);
-			TLiteQuery *Q1 = SelectQ(sql1,connDB1);
+			TFDConnection *connDB1 = new TFDConnection(NULL);
+			TFDQuery *Q1 = SelectQ(sql1,connDB1);
 				hintstr = "ÃÖÇÝå : " + Q1->FieldByName("userFullName")->AsAnsiString;
 
 

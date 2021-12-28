@@ -13,7 +13,6 @@ object FAddImages: TFAddImages
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poMainFormCenter
   OnClose = FormClose
@@ -248,7 +247,6 @@ object FAddImages: TFAddImages
         Top = 0
         Width = 784
         Height = 148
-        Cursor = crDefault
         Align = alClient
         BevelInner = bvNone
         BevelKind = bkFlat
@@ -270,7 +268,6 @@ object FAddImages: TFAddImages
         ParentDoubleBuffered = False
         ParentFont = False
         ParentShowHint = False
-        ScrollBars = ssBoth
         ShowHint = True
         TabOrder = 1
         OnClick = imageSGClick
@@ -279,7 +276,6 @@ object FAddImages: TFAddImages
         ActiveRowColor = 14398901
         GridLineColor = 15987699
         GridFixedLineColor = 15987699
-        HoverRowCells = [hcNormal, hcSelected]
         OnGetCellCursor = imageSGGetCellCursor
         OnGetAlignment = imageSGGetAlignment
         OnGridHint = imageSGGridHint
@@ -357,7 +353,6 @@ object FAddImages: TFAddImages
         GridImages = ImageList1
         HideFocusRect = True
         HoverButtons.Buttons = <>
-        HoverButtons.Position = hbLeftFromColumnLeft
         HTMLSettings.ImageFolder = 'images'
         HTMLSettings.ImageBaseName = 'img'
         Look = glClassic
@@ -413,10 +408,9 @@ object FAddImages: TFAddImages
         SelectionMirrorColorTo = clHighlight
         ShowSelection = False
         ShowDesignHelper = False
-        SortSettings.DefaultFormat = ssAutomatic
         SyncGrid.ScrollVertical = True
         VAlignment = vtaCenter
-        Version = '8.5.11.0'
+        Version = '8.6.9.0'
         WordWrap = False
         ColWidths = (
           91

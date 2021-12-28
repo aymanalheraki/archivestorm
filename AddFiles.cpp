@@ -129,8 +129,8 @@ void __fastcall TFAddFiles::FormShow(TObject *Sender)
 	strS3 = strS3 + " LEFT JOIN users on addfiles.userID = users.userID ";
 	strS3 = strS3 + " WHERE addfiles.arcID = " + arcID + str0;;
 
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strS3,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strS3,connDB);
 
 	SendMessage(fileSG->Handle, WM_SETREDRAW, FALSE, 0);
 	if(Q->RecordCount > 0)
@@ -194,17 +194,17 @@ void __fastcall TFAddFiles::btnAddFileClick(TObject *Sender)
 				try
 				{
 
-				TLiteConnection *connDB = new TLiteConnection(Application);
 
-				connDB->Database = FMain->DataFile;
-				connDB->Options->Direct = true;
-				connDB->Options->UseUnicode = true;
-				connDB->Connected = true;
-				TLiteQuery *stdQ = new TLiteQuery(NULL);
+
+
+
+
+				TFDConnection *connDB = new TFDConnection(NULL);
+				connDB->DriverName = "Sqlite";
+				connDB->Params->Values["Database"] = FMain->DataFile;
+				connDB->Open();
+				TFDQuery *stdQ = new TFDQuery(NULL);
 				stdQ->Connection = connDB;
-				stdQ->LockMode = lmOptimistic;
-				stdQ->CheckMode = cmRefresh;
-
 				stdQ->SQL->Text = strSQL;
 				stdQ->ParamByName("blobFile")->LoadFromStream(streamIn,ftBlob);
 				stdQ->ExecSQL();
@@ -285,8 +285,8 @@ void __fastcall TFAddFiles::fileSGDblClickCell(TObject *Sender, int ARow, int AC
 		{
 			AnsiString strSql = "Select * FROM addfiles WHERE fileID = " + fileSG->Cells[1][fileSG->Row];
 
-			TLiteConnection *connDB = new TLiteConnection(NULL);
-			TLiteQuery *stdQ = SelectQ(strSql,connDB);
+			TFDConnection *connDB = new TFDConnection(NULL);
+			TFDQuery *stdQ = SelectQ(strSql,connDB);
 
 			TStream *st1 = stdQ->CreateBlobStream((TBlobField *) stdQ->FieldByName("fileArc"),bmRead);
 			st1->Position = 0;

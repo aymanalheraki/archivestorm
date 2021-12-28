@@ -38,6 +38,8 @@
 #pragma link "iexRulers"
 #pragma link "iexLayers"
 #pragma link "iexToolbars"
+#pragma link "iexUserInteractions"
+#pragma link "imageenproc"
 #pragma resource "*.dfm"
 TFAddImages *FAddImages;
 //---------------------------------------------------------------------------
@@ -121,8 +123,8 @@ void __fastcall TFAddImages::FormShow(TObject *Sender)
 	sql += " LEFT JOIN users on addImages.userID = users.userID ";
 	sql += " WHERE addImages.arcID = " + arcID;
 
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(sql,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(sql,connDB);
 	SendMessage(imageSG->Handle, WM_SETREDRAW, FALSE, 0);
 	if(Q->RecordCount > 0)
 	{
@@ -301,29 +303,25 @@ void __fastcall TFAddImages::SaveImage()
 			 ImageEnVect2->IO->SaveToStreamJpeg(streamIN);
 			try
 			{
-				TLiteConnection *connDB = new TLiteConnection(Application);
 
-				connDB->Database = FMain->DataFile;
-				connDB->Options->Direct = true;
-				connDB->Options->UseUnicode = true;
-				connDB->Connected = true;
-				TLiteQuery *stdQ = new TLiteQuery(NULL);
+
+
+				TFDConnection *connDB = new TFDConnection(NULL);
+				connDB->DriverName = "Sqlite";
+				connDB->Params->Values["Database"] = FMain->DataFile;
+				connDB->Open();
+				TFDQuery *stdQ = new TFDQuery(NULL);
 				stdQ->Connection = connDB;
-				stdQ->LockMode = lmOptimistic;
-				stdQ->CheckMode = cmRefresh;
 				stdQ->SQL->Text = strSQL;
 				stdQ->ParamByName("blobImage")->LoadFromStream(streamIN,ftBlob);
 				stdQ->ExecSQL();
-				stdQ->Close();
 				connDB->Close();
 			}catch(Exception *e)
 			{
 				ShowMessage(e->Message);
 			}
 
-			 streamIN->Free();
-
-			// FormShow(Sender);
+			 delete streamIN;
 		}
 
 		ImageEnMView1->Clear();
@@ -422,8 +420,8 @@ void __fastcall TFAddImages::imageSGClick(TObject *Sender)
 		bool a1 = true;
 		imageSGRowChanging(Sender, -1, imageSG->Row,a1);
 		AnsiString strSql = "Select * FROM addImages WHERE imageID = " + imageID;
-		TLiteConnection *connDB = new TLiteConnection(NULL);
-		TLiteQuery *stdQ = SelectQ(strSql,connDB);
+		TFDConnection *connDB = new TFDConnection(NULL);
+		TFDQuery *stdQ = SelectQ(strSql,connDB);
 		TMemoryStream *st1 = (TMemoryStream*)stdQ->CreateBlobStream((TBlobField *) stdQ->FieldByName("imageArc"),bmRead);
 		vImageFileName = stdQ->FieldByName("imageName")->AsString;
 		ImageEnVect1->IO->LoadFromStream(st1);
@@ -574,8 +572,8 @@ void __fastcall TFAddImages::imageSGGridHint(TObject *Sender, int ARow, int ACol
 			AnsiString sql1 = "SELECT strftime(addImages.imagePostDate) as da,u.userFullName AS aUser from addImages ";
 			sql1 = sql1 + "LEFT JOIN users u on addImages.imageUserID = u.userID ";
 			sql1 = sql1 + " WHERE imageID = " + imageSG->Cells[1][ARow];
-			TLiteConnection *connDB = new TLiteConnection(NULL);
-			TLiteQuery *Q = SelectQ(sql1, connDB);
+			TFDConnection *connDB = new TFDConnection(NULL);
+			TFDQuery *Q = SelectQ(sql1, connDB);
 			if(Q->RecordCount > 0)
 			{
 				hintstr = "Addition : " + Q->FieldByName("aUser")->AsString + "\n"

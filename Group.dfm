@@ -11,13 +11,12 @@ object FGroup: TFGroup
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnCreate = FormCreate
+  PixelsPerInch = 96
   DesignSize = (
     586
     319)
-  PixelsPerInch = 96
   TextHeight = 13
   object Label3: TLabel
     Left = 8
@@ -73,7 +72,6 @@ object FGroup: TFGroup
       Top = 11
       Width = 155
       Height = 19
-      DefaultHandling = True
       EmptyTextStyle = []
       ShowError = True
       ReturnIsTab = True
@@ -104,7 +102,7 @@ object FGroup: TFGroup
       TabOrder = 0
       Text = ''
       Visible = True
-      Version = '3.4.2.2'
+      Version = '4.0.1.3'
     end
     object btnSaveM: TAeroButton
       Left = 215
@@ -113,7 +111,7 @@ object FGroup: TFGroup
       Height = 25
       ImageIndex = 2
       Images = ImageList1
-      Version = '1.0.0.1'
+      Version = '1.0.0.2'
       Anchors = [akTop, akRight]
       Caption = 'Save'
       Enabled = False
@@ -141,7 +139,7 @@ object FGroup: TFGroup
       Height = 25
       ImageIndex = 1
       Images = ImageList1
-      Version = '1.0.0.1'
+      Version = '1.0.0.2'
       Anchors = [akTop, akRight]
       Caption = 'Add MainGroup'
       TabOrder = 0
@@ -166,7 +164,6 @@ object FGroup: TFGroup
       Top = 11
       Width = 156
       Height = 19
-      DefaultHandling = True
       EmptyTextStyle = []
       ShowError = True
       ReturnIsTab = True
@@ -197,7 +194,7 @@ object FGroup: TFGroup
       TabOrder = 0
       Text = ''
       Visible = True
-      Version = '3.4.2.2'
+      Version = '4.0.1.3'
     end
     object btnSaveS: TAeroButton
       Left = 213
@@ -206,7 +203,7 @@ object FGroup: TFGroup
       Height = 25
       ImageIndex = 2
       Images = ImageList1
-      Version = '1.0.0.1'
+      Version = '1.0.0.2'
       Anchors = [akTop, akRight]
       Caption = 'Save'
       Enabled = False
@@ -234,7 +231,7 @@ object FGroup: TFGroup
       Height = 25
       ImageIndex = 1
       Images = ImageList1
-      Version = '1.0.0.1'
+      Version = '1.0.0.2'
       Anchors = [akTop, akRight]
       Caption = 'Add SubGroup'
       Enabled = False
@@ -247,7 +244,6 @@ object FGroup: TFGroup
     Top = 39
     Width = 282
     Height = 154
-    Cursor = crDefault
     BiDiMode = bdLeftToRight
     ColCount = 3
     Ctl3D = True
@@ -257,11 +253,9 @@ object FGroup: TFGroup
     ParentBiDiMode = False
     ParentCtl3D = False
     ParentShowHint = False
-    ScrollBars = ssBoth
     ShowHint = True
     TabOrder = 0
     OnClick = mSGClick
-    HoverRowCells = [hcNormal, hcSelected]
     OnGetCellCursor = mSGGetCellCursor
     OnDblClickCell = mSGDblClickCell
     HintShowCells = True
@@ -325,7 +319,6 @@ object FGroup: TFGroup
     FloatFormat = '%.2f'
     GridImages = ImageList1
     HoverButtons.Buttons = <>
-    HoverButtons.Position = hbLeftFromColumnLeft
     HTMLSettings.ImageFolder = 'images'
     HTMLSettings.ImageBaseName = 'img'
     Look = glStandard
@@ -369,12 +362,11 @@ object FGroup: TFGroup
     SelectionColor = clHighlight
     SelectionTextColor = clHighlightText
     ShowDesignHelper = False
-    SortSettings.DefaultFormat = ssAutomatic
     SortSettings.HeaderColorTo = 16579058
     SortSettings.HeaderMirrorColor = 16380385
     SortSettings.HeaderMirrorColorTo = 16182488
     VAlignment = vtaCenter
-    Version = '8.2.4.1'
+    Version = '8.6.9.0'
     ColWidths = (
       64
       65
@@ -390,7 +382,6 @@ object FGroup: TFGroup
     Top = 39
     Width = 282
     Height = 154
-    Cursor = crDefault
     BiDiMode = bdLeftToRight
     ColCount = 3
     Ctl3D = True
@@ -400,11 +391,9 @@ object FGroup: TFGroup
     ParentBiDiMode = False
     ParentCtl3D = False
     ParentShowHint = False
-    ScrollBars = ssBoth
     ShowHint = True
     TabOrder = 3
     OnClick = sSGClick
-    HoverRowCells = [hcNormal, hcSelected]
     OnGetCellCursor = sSGGetCellCursor
     OnDblClickCell = sSGDblClickCell
     HintShowCells = True
@@ -468,7 +457,6 @@ object FGroup: TFGroup
     FloatFormat = '%.2f'
     GridImages = ImageList1
     HoverButtons.Buttons = <>
-    HoverButtons.Position = hbLeftFromColumnLeft
     HTMLSettings.ImageFolder = 'images'
     HTMLSettings.ImageBaseName = 'img'
     Look = glStandard
@@ -512,12 +500,11 @@ object FGroup: TFGroup
     SelectionColor = clHighlight
     SelectionTextColor = clHighlightText
     ShowDesignHelper = False
-    SortSettings.DefaultFormat = ssAutomatic
     SortSettings.HeaderColorTo = 16579058
     SortSettings.HeaderMirrorColor = 16380385
     SortSettings.HeaderMirrorColorTo = 16182488
     VAlignment = vtaCenter
-    Version = '8.2.4.1'
+    Version = '8.6.9.0'
     ColWidths = (
       64
       65
@@ -535,7 +522,7 @@ object FGroup: TFGroup
     Height = 28
     ImageIndex = 3
     Images = ImageList1
-    Version = '1.0.0.1'
+    Version = '1.0.0.2'
     Anchors = [akTop, akRight]
     Caption = 'Exit'
     TabOrder = 6
@@ -545,7 +532,7 @@ object FGroup: TFGroup
     Left = 445
     Top = 65529
     Bitmap = {
-      494C010104000801600110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010104000801040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

@@ -1,5 +1,10 @@
 //---------------------------------------------------------------------------
-
+#define RT_RCDATA          MAKEINTRESOURCE(10)
+#ifdef UNICODE
+#define MAKEINTRESOURCE  MAKEINTRESOURCEW
+#else
+#define MAKEINTRESOURCE  MAKEINTRESOURCEA
+#endif
 #include <vcl.h>
 
 #pragma hdrstop
@@ -36,10 +41,7 @@
 
 
 #pragma link "RzLabel"
-#pragma link "DBAccess"
-#pragma link "LiteAccess"
-#pragma link "LiteCall"
-#pragma link "MemDS"
+
 #pragma link "ieview"
 #pragma link "imageenview"
 #pragma link "frxClass"
@@ -51,6 +53,10 @@
 
 #pragma link "iexRulers"
 #pragma link "AdvMetroTile"
+#pragma link "AdvGrid"
+#pragma link "AdvObj"
+#pragma link "AdvUtil"
+#pragma link "BaseGrid"
 #pragma resource "*.dfm"
 TFMain *FMain;
 TRzTabSheet *TabArcMain;
@@ -91,6 +97,7 @@ void __fastcall TFMain::FormShow(TObject *Sender)
 			if (Application->MessageBoxA(L"There is no database file with the program - Would you like to create a new file?",L"Alert message",MB_YESNO | MB_ICONQUESTION ) == IDYES)
 			{
 				TResourceStream* resFile = new TResourceStream((int)HInstance, L"arcdata1", L"RT_RCDATA");
+
 				resFile->SaveToFile(DataFile);
 			}
 			else
@@ -143,13 +150,13 @@ void __fastcall TFMain::FormShow(TObject *Sender)
 
 
 //----------------------------------------------------------------------------
-
-		AnsiString tt = dateSystem;
-		const char *a = tt.c_str() ;
-		const char *b = "yyyy/MM/dd";
-		SetLocaleInfo(GetUserDefaultLCID(),LOCALE_ICALENDARTYPE,a);
-		SetLocaleInfo(GetUserDefaultLCID(),LOCALE_SSHORTDATE,b);
-		SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, 0);
+//
+//		AnsiString tt = dateSystem;
+//		const char *a = tt.c_str() ;
+//		const char *b = "yyyy/MM/dd";
+//		SetLocaleInfo(GetUserDefaultLCID(),LOCALE_ICALENDARTYPE,a);
+//		SetLocaleInfo(GetUserDefaultLCID(),LOCALE_SSHORTDATE,b);
+//		SendMessage(HWND_BROADCAST, WM_SETTINGCHANGE, 0, 0);
 
  getVars();
 
@@ -189,14 +196,11 @@ void __fastcall TFMain::FormShow(TObject *Sender)
 		Application->Terminate();
 	}
 
-
-  //	ToolArcMainClick(Sender);
-//
 	AnsiString strSQL = "SELECT * FROM vars WHERE id=1";
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strSQL,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strSQL,connDB);
 	TMemoryStream *stImage1 = (TMemoryStream*)Q->CreateBlobStream((TBlobField *) Q->FieldByName("logo"),bmRead);
-	//ImageEnVect1->IO->LoadFromStream(st1);
+
 	if(reg==1)
 	{
 		if(stImage1->Size > 0)
@@ -218,8 +222,8 @@ void __fastcall TFMain::FormShow(TObject *Sender)
 void __fastcall TFMain::getVars()
 {
 	AnsiString strSql = "SELECT * FROM vars WHERE id=1";
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strSql,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strSql,connDB);
 	if(Q->FieldByName("RunCounter")->AsInteger == 0)
 	{
 		AnsiString sql1 = ";UPDATE users SET userPostDate = '" + Now().FormatString("YYYY-MM-DD HH:mm:ss") + "' WHERE userID=1";

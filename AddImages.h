@@ -47,6 +47,8 @@
 #include "iexRulers.hpp"
 #include "iexLayers.hpp"
 #include "iexToolbars.hpp"
+#include "iexUserInteractions.hpp"
+#include "imageenproc.hpp"
 //---------------------------------------------------------------------------
 class TFAddImages : public TForm
 {

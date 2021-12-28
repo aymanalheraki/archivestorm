@@ -13,7 +13,6 @@ object FArcMain: TFArcMain
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   OnCreate = FormCreate
   OnShow = FormShow
@@ -67,7 +66,6 @@ object FArcMain: TFArcMain
             Top = 0
             Width = 1028
             Height = 163
-            Cursor = crDefault
             Align = alClient
             BiDiMode = bdLeftToRight
             Color = clWhite
@@ -90,7 +88,6 @@ object FArcMain: TFArcMain
             TabOrder = 0
             GridLineColor = 15987699
             GridFixedLineColor = 15987699
-            HoverRowCells = [hcNormal, hcSelected]
             OnGetAlignment = ProcSGGetAlignment
             OnGridHint = ProcSGGridHint
             OnRowChanging = ProcSGRowChanging
@@ -159,7 +156,6 @@ object FArcMain: TFArcMain
             FloatFormat = '%.2f'
             GridImages = ImageList1
             HoverButtons.Buttons = <>
-            HoverButtons.Position = hbLeftFromColumnLeft
             HTMLSettings.ImageFolder = 'images'
             HTMLSettings.ImageBaseName = 'img'
             PrintSettings.DateFormat = 'dd/mm/yyyy'
@@ -203,9 +199,8 @@ object FArcMain: TFArcMain
             SelectionRectangle = True
             ShowSelection = False
             ShowDesignHelper = False
-            SortSettings.DefaultFormat = ssAutomatic
             VAlignment = vtaCenter
-            Version = '8.5.11.0'
+            Version = '8.6.9.0'
             ColWidths = (
               64
               64
@@ -521,7 +516,7 @@ object FArcMain: TFArcMain
             Text = ''
             Visible = True
             OnKeyPress = txtArcSearchKeyPress
-            Version = '3.5.6.0'
+            Version = '4.0.1.3'
           end
           object chkActiveDate: TRzCheckBox
             Left = 563
@@ -577,7 +572,7 @@ object FArcMain: TFArcMain
               BorderStyle = bsSingle
               Ctl3D = True
               DateTime = 41265.000000000000000000
-              Version = '1.3.6.0'
+              Version = '1.3.6.2'
               LabelCaption = 'To'
               LabelPosition = lpLeftCenter
               LabelFont.Charset = DEFAULT_CHARSET
@@ -613,7 +608,7 @@ object FArcMain: TFArcMain
               BorderStyle = bsSingle
               Ctl3D = True
               DateTime = 41265.000000000000000000
-              Version = '1.3.6.0'
+              Version = '1.3.6.2'
               LabelCaption = 'From'
               LabelPosition = lpLeftCenter
               LabelFont.Charset = DEFAULT_CHARSET
@@ -682,7 +677,7 @@ object FArcMain: TFArcMain
             Text = ''
             Visible = True
             OnKeyPress = txtArcSearchKeyPress
-            Version = '3.5.6.0'
+            Version = '4.0.1.3'
           end
           object cmbMainGroup: TRzComboBox
             Left = 261
@@ -757,7 +752,6 @@ object FArcMain: TFArcMain
           Top = 92
           Width = 1028
           Height = 306
-          Cursor = crDefault
           Align = alClient
           BevelInner = bvNone
           BevelKind = bkFlat
@@ -769,7 +763,7 @@ object FArcMain: TFArcMain
           DoubleBuffered = True
           DrawingStyle = gdsClassic
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = clBlack
+          Font.Color = clWindowText
           Font.Height = -11
           Font.Name = 'Tahoma'
           Font.Style = []
@@ -783,9 +777,8 @@ object FArcMain: TFArcMain
           ShowHint = True
           TabOrder = 3
           ActiveRowColor = 12615808
-          GridLineColor = 15987699
-          GridFixedLineColor = 15987699
-          HoverRowCells = [hcNormal, hcSelected]
+          GridLineColor = 15527152
+          GridFixedLineColor = 13947601
           OnGetCellColor = arcSGGetCellColor
           OnGetCellCursor = arcSGGetCellCursor
           OnGetAlignment = arcSGGetAlignment
@@ -869,7 +862,6 @@ object FArcMain: TFArcMain
           FocusHelper.Enabled = True
           GridImages = ImageList2
           HoverButtons.Buttons = <>
-          HoverButtons.Position = hbLeftFromColumnLeft
           HTMLSettings.ImageFolder = 'images'
           HTMLSettings.ImageBaseName = 'img'
           Look = glWin7
@@ -909,7 +901,8 @@ object FArcMain: TFArcMain
           ScrollProportional = True
           ScrollSynch = True
           ScrollHints = shVertical
-          SearchFooter.ColorTo = clWhite
+          SearchFooter.Color = 16645370
+          SearchFooter.ColorTo = 16247261
           SearchFooter.FindNextCaption = 'Find &next'
           SearchFooter.FindPrevCaption = 'Find &previous'
           SearchFooter.Font.Charset = DEFAULT_CHARSET
@@ -924,12 +917,10 @@ object FArcMain: TFArcMain
           SearchFooter.HintHighlight = 'Highlight occurrences'
           SearchFooter.MatchCaseCaption = 'Match case'
           SearchFooter.ResultFormat = '(%d of %d)'
-          SelectionColor = 14460807
           SelectionRectangle = True
           ShowSelection = False
           ShowModified.Enabled = True
           ShowDesignHelper = False
-          SortSettings.DefaultFormat = ssAutomatic
           SortSettings.HeaderColor = 16579058
           SortSettings.HeaderColorTo = 16579058
           SortSettings.HeaderMirrorColor = 16380385
@@ -937,7 +928,7 @@ object FArcMain: TFArcMain
           SyncGrid.ScrollVertical = True
           UIStyle = tsWindows7
           VAlignment = vtaCenter
-          Version = '8.5.11.0'
+          Version = '8.6.9.0'
           WordWrap = False
           ColWidths = (
             91
@@ -2193,7 +2184,7 @@ object FArcMain: TFArcMain
       000000000000}
   end
   object ArcPrint: TfrxReport
-    Version = '6.9.10'
+    Version = '2021.3.4'
     DotMatrixReport = False
     IniFile = '\Software\Fast Reports'
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick]
@@ -2707,6 +2698,7 @@ object FArcMain: TFArcMain
       'arcDate=arcDate'
       'arcDateA=arcDateA')
     BCDToCurrency = False
+    DataSetOptions = []
     Left = 457
     Top = 213
   end

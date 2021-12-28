@@ -20,11 +20,6 @@
 #include <Vcl.ImgList.hpp>
 #include <Vcl.Menus.hpp>
 #include "RzLabel.hpp"
-#include "DBAccess.hpp"
-#include "LiteAccess.hpp"
-#include "LiteCall.hpp"
-#include "MemDS.hpp"
-#include <Data.DB.hpp>
 #include "ieview.hpp"
 #include "imageenview.hpp"
 #include <System.ImageList.hpp>
@@ -39,6 +34,33 @@
 #include "iexRulers.hpp"
 #include <System.Contnrs.hpp>
 #include "AdvMetroTile.hpp"
+#include <Data.DB.hpp>
+#include <FireDAC.Comp.Client.hpp>
+#include <FireDAC.Comp.DataSet.hpp>
+#include <FireDAC.DApt.hpp>
+#include <FireDAC.DApt.Intf.hpp>
+#include <FireDAC.DatS.hpp>
+#include <FireDAC.Phys.hpp>
+#include <FireDAC.Phys.Intf.hpp>
+#include <FireDAC.Phys.SQLite.hpp>
+#include <FireDAC.Phys.SQLiteDef.hpp>
+#include <FireDAC.Phys.SQLiteWrapper.Stat.hpp>
+#include <FireDAC.Stan.Async.hpp>
+#include <FireDAC.Stan.Def.hpp>
+#include <FireDAC.Stan.Error.hpp>
+#include <FireDAC.Stan.ExprFuncs.hpp>
+#include <FireDAC.Stan.Intf.hpp>
+#include <FireDAC.Stan.Option.hpp>
+#include <FireDAC.Stan.Param.hpp>
+#include <FireDAC.Stan.Pool.hpp>
+#include <FireDAC.UI.Intf.hpp>
+#include <FireDAC.VCLUI.Wait.hpp>
+#include "AdvGrid.hpp"
+#include "AdvObj.hpp"
+#include "AdvUtil.hpp"
+#include "BaseGrid.hpp"
+#include <Vcl.Grids.hpp>
+
 
 
 //---------------------------------------------------------------------------
@@ -90,6 +112,7 @@ __published:	// IDE-managed Components
 	TAdvMetroTile *AdvMetroTile1;
 	TAdvMetroTile *AdvMetroTile2;
 	TButton *btnExit;
+	TFDPhysSQLiteDriverLink *FDPhysSQLiteDriverLink1;
 	void __fastcall FormCreate(TObject *Sender);
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall getVars();

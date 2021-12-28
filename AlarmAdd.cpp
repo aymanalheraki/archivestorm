@@ -61,8 +61,8 @@ void __fastcall TFAlarmAdd::btnSaveClick(TObject *Sender)
 void __fastcall TFAlarmAdd::FormShow(TObject *Sender)
 {
 	AnsiString str1 = "SELECT * FROM arcmain WHERE arcID = " + arcID;
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(str1,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(str1,connDB);
 
 	if(Q->FieldByName("arcAlarm")->AsAnsiString != "")
 	{

@@ -26,6 +26,9 @@
 #pragma link "iexRulers"
 #pragma link "iexLayers"
 #pragma link "iexToolbars"
+#pragma link "iexUserInteractions"
+#pragma link "imageenio"
+#pragma link "imageenproc"
 #pragma resource "*.dfm"
 TFVars *FVars;
 //---------------------------------------------------------------------------
@@ -60,16 +63,12 @@ void __fastcall TFVars::btnSaveClick(TObject *Sender)
 	try
 	{
 
-		TLiteConnection *connDB = new TLiteConnection(Application);
+		TFDConnection *connDB = new TFDConnection(Application);
 
-		connDB->Database = FMain->DataFile;
-		connDB->Options->Direct = true;
-		connDB->Options->UseUnicode = true;
-		connDB->Connected = true;
-		TLiteQuery *stdQ = new TLiteQuery(NULL);
+		connDB->Params->Database = FMain->DataFile;
+		connDB->Open();
+		TFDQuery *stdQ = new TFDQuery(NULL);
 		stdQ->Connection = connDB;
-		stdQ->LockMode = lmOptimistic;
-		stdQ->CheckMode = cmRefresh;
 		stdQ->SQL->Text = strSQL;
 		stdQ->ParamByName("blobImage")->LoadFromStream(stImage,ftBlob);
 		stdQ->ExecSQL();
@@ -90,8 +89,8 @@ void __fastcall TFVars::FormShow(TObject *Sender)
 {
 
 	AnsiString strSQL = "SELECT * FROM vars WHERE id=1";
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strSQL,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strSQL,connDB);
 	int vDateC = Q->FieldByName("dateC")->AsInteger;
 	txtName1->Text = Q->FieldByName("Name1")->AsAnsiString;
 	txtName2->Text = Q->FieldByName("Name2")->AsAnsiString;

@@ -13,7 +13,6 @@ object FArcImages: TFArcImages
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   OnCreate = FormCreate
   PixelsPerInch = 96
@@ -48,7 +47,7 @@ object FArcImages: TFArcImages
       DataFloatFormat = '%f'
       DataDateFormat = 'dd/MM/yyyy'
       Separator = ':'
-      Version = '1.0.0.2'
+      Version = '1.0.1.0'
     end
     object RzPanel5: TRzPanel
       Left = 0
@@ -245,7 +244,6 @@ object FArcImages: TFArcImages
             Top = 10
             Width = 145
             Height = 19
-            DefaultHandling = True
             EmptyTextStyle = []
             ShowError = True
             LabelPosition = lpRightCenter
@@ -274,7 +272,7 @@ object FArcImages: TFArcImages
             Text = ''
             Visible = True
             OnKeyPress = txtImageSearchKeyPress
-            Version = '3.4.2.2'
+            Version = '4.0.1.3'
           end
           object btnExpandAll: TAeroButton
             Left = 20
@@ -285,7 +283,7 @@ object FArcImages: TFArcImages
             ImageIndex = 1
             Images = ImageList1
             ImagePos = ipRight
-            Version = '1.0.0.1'
+            Version = '1.0.0.2'
             ParentShowHint = False
             ShowHint = True
             TabOrder = 1
@@ -299,7 +297,7 @@ object FArcImages: TFArcImages
             Hint = #1590#1594#1591' '#1588#1580#1585#1577' '#1575#1604#1589#1608#1585
             ImageIndex = 0
             Images = ImageList1
-            Version = '1.0.0.1'
+            Version = '1.0.0.2'
             ParentShowHint = False
             ShowHint = True
             TabOrder = 2
@@ -396,14 +394,13 @@ object FArcImages: TFArcImages
               Height = 386
               Cursor = crArrow
               Background = 14671839
-              Ctl3D = False
-              ParentCtl3D = False
+              BackgroundStyle = iebsCropShadow
               BorderStyle = bsNone
               LegacyBitmap = True
               SelectionOptions = [iesoCanScroll]
-              MouseInteract = [miZoom, miScroll]
-              AutoFit = True
-              BackgroundStyle = iebsCropShadow
+              MouseInteractGeneral = [miZoom, miScroll]
+              AutoStretch = True
+              AutoShrink = True
               EnableInteractionHints = False
               Align = alClient
               ParentShowHint = False
@@ -458,7 +455,6 @@ object FArcImages: TFArcImages
               Top = 0
               Width = 609
               Height = 392
-              Cursor = crDefault
               Align = alClient
               BevelInner = bvNone
               BevelOuter = bvNone
@@ -475,11 +471,9 @@ object FArcImages: TFArcImages
               ParentCtl3D = False
               ParentDoubleBuffered = False
               ParentFont = False
-              ScrollBars = ssBoth
               TabOrder = 1
               OnClick = imageSGClick
               OnDblClick = imageSGDblClick
-              HoverRowCells = [hcNormal, hcSelected]
               OnGetCellColor = imageSGGetCellColor
               ActiveCellFont.Charset = DEFAULT_CHARSET
               ActiveCellFont.Color = clWindowText
@@ -541,7 +535,6 @@ object FArcImages: TFArcImages
               Grouping.ShowGroupCount = True
               Grouping.SummaryLineWidth = 1
               HoverButtons.Buttons = <>
-              HoverButtons.Position = hbLeftFromColumnLeft
               HTMLSettings.ImageFolder = 'images'
               HTMLSettings.ImageBaseName = 'img'
               PrintSettings.DateFormat = 'dd/mm/yyyy'
@@ -581,8 +574,7 @@ object FArcImages: TFArcImages
               SearchFooter.MatchCaseCaption = 'Match case'
               SearchFooter.ResultFormat = '(%d of %d)'
               ShowDesignHelper = False
-              SortSettings.DefaultFormat = ssAutomatic
-              Version = '8.2.4.1'
+              Version = '8.6.9.0'
               ExplicitWidth = 673
               ColWidths = (
                 64
@@ -616,7 +608,7 @@ object FArcImages: TFArcImages
     Left = 424
     Top = 328
     Bitmap = {
-      494C010102000800740014001400FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010102000800040014001400FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000500000001400000001002000000000000019
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

@@ -23,8 +23,8 @@ __fastcall TFUsersEdit::TFUsersEdit(TComponent* Owner)
 void __fastcall TFUsersEdit::FormShow(TObject *Sender)
 {
 	AnsiString strSql = "Select * FROM users WHERE UserID=" + UserID;
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strSql,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strSql,connDB);
 
 	if(Q->RecordCount > 0)
 	{

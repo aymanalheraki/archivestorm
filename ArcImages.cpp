@@ -33,6 +33,11 @@
 #pragma link "iesettings"
 #pragma link "iexBitmaps"
 #pragma link "iexRulers"
+#pragma link "iexLayers"
+#pragma link "iexToolbars"
+#pragma link "iexUserInteractions"
+#pragma link "imageenio"
+#pragma link "imageenproc"
 #pragma resource "*.dfm"
 TFArcImages *FArcImages;
 
@@ -185,8 +190,8 @@ void __fastcall TFArcImages::FillImageSG()
 
 	strS = strS + " WHERE addImages.imageID = addImages.imageID "	 + str0 + str1 + str2 + str3 + str4 + str5 + str6;
 
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strS,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strS,connDB);
 
 	SendMessage(imageSG->Handle, WM_SETREDRAW, FALSE, 0);
 	if(Q->RecordCount > 0)
@@ -262,8 +267,8 @@ void __fastcall TFArcImages::imageSGClick(TObject *Sender)
 //		}
 
 		AnsiString strSql = "Select * FROM addImages WHERE imageID = " + imageID;
-		TLiteConnection *connDB = new TLiteConnection(NULL);
-		TLiteQuery *stdQ = SelectQ(strSql,connDB);
+		TFDConnection *connDB = new TFDConnection(NULL);
+		TFDQuery *stdQ = SelectQ(strSql,connDB);
 
 		if(stdQ->RecordCount > 0)
 		{

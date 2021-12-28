@@ -43,8 +43,8 @@ void __fastcall TFTypes::FormCreate(TObject *Sender)
 void __fastcall TFTypes::filltSG()
  {
 	AnsiString str1 = "Select * FROM arctypes Order By typeID";
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(str1,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(str1,connDB);
 
 	if(Q->RecordCount > 0)
 	{
@@ -91,8 +91,8 @@ void __fastcall TFTypes::btnSaveClick(TObject *Sender)
 
 
 	AnsiString strS = "SELECT * FROM arctypes WHERE typeName = '" + txtName->Text.Trim() + "'";
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strS,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strS,connDB);
 
 	if(Q->RecordCount > 0)
 	{
@@ -133,8 +133,8 @@ void __fastcall TFTypes::tSGDblClickCell(TObject *Sender, int ARow, int ACol)
 	if(ACol == 2 && ARow > 0 && tSG->GetImageIdx(2,ARow,aa) == true)
 	{
 		AnsiString strS = "SELECT * FROM arcmain WHERE arcType = " + tID;
-		TLiteConnection *connDB = new TLiteConnection(NULL);
-		TLiteQuery *Q = SelectQ(strS,connDB);
+		TFDConnection *connDB = new TFDConnection(NULL);
+		TFDQuery *Q = SelectQ(strS,connDB);
 
 		if(Q->RecordCount > 0)
 		{

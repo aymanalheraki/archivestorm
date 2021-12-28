@@ -3,18 +3,17 @@ object FMain: TFMain
   Top = 0
   BiDiMode = bdLeftToRight
   Caption = 'ArchiveStorm 2.0 - Lite archiving system'
-  ClientHeight = 641
-  ClientWidth = 984
+  ClientHeight = 762
+  ClientWidth = 1186
   Color = clBtnFace
-  Constraints.MinHeight = 700
-  Constraints.MinWidth = 1000
+  Constraints.MinHeight = 768
+  Constraints.MinWidth = 1024
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
   Menu = AdvMainMenu1
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poDesktopCenter
   WindowState = wsMaximized
@@ -26,8 +25,8 @@ object FMain: TFMain
   TextHeight = 13
   object StatusBar: TRzStatusBar
     Left = 0
-    Top = 622
-    Width = 984
+    Top = 743
+    Width = 1186
     Height = 19
     BorderInner = fsNone
     BorderOuter = fsNone
@@ -87,8 +86,8 @@ object FMain: TFMain
   object TopPanel: TPanel
     Left = 0
     Top = 84
-    Width = 984
-    Height = 538
+    Width = 1186
+    Height = 659
     Align = alClient
     BevelEdges = [beLeft]
     BevelOuter = bvNone
@@ -104,13 +103,13 @@ object FMain: TFMain
     ParentFont = False
     TabOrder = 1
     DesignSize = (
-      984
-      538)
+      1186
+      659)
     object MImage: TImage
       Left = 0
       Top = 0
-      Width = 984
-      Height = 538
+      Width = 1186
+      Height = 659
       Align = alClient
       Center = True
       Picture.Data = {
@@ -3001,7 +3000,7 @@ object FMain: TFMain
     end
     object lblVer: TRzLabel
       Left = 14
-      Top = 135
+      Top = 600
       Width = 89
       Height = 13
       Margins.Bottom = 0
@@ -3019,7 +3018,6 @@ object FMain: TFMain
       LightTextStyle = True
       HighlightColor = clGreen
       ShadowColor = 6723891
-      ExplicitTop = 282
     end
     object PCM: TRzPageControl
       Left = 51
@@ -3051,7 +3049,7 @@ object FMain: TFMain
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 984
+    Width = 1186
     Height = 84
     Align = alTop
     BevelOuter = bvNone
@@ -3070,7 +3068,7 @@ object FMain: TFMain
     ParentFont = False
     TabOrder = 2
     DesignSize = (
-      982
+      1184
       82)
     object btnDocuManagement: TAdvMetroTile
       Left = 3
@@ -3780,7 +3778,7 @@ object FMain: TFMain
       PictureAutoColor = False
       ParentFont = False
       TabOrder = 0
-      Version = '1.1.3.0'
+      Version = '1.1.4.0'
       OnClick = btnDocuManagementClick
     end
     object AdvMetroTile1: TAdvMetroTile
@@ -4507,7 +4505,7 @@ object FMain: TFMain
       PictureAutoColor = False
       ParentFont = False
       TabOrder = 1
-      Version = '1.1.3.0'
+      Version = '1.1.4.0'
       OnClick = AdvMetroTile1Click
     end
     object AdvMetroTile2: TAdvMetroTile
@@ -5224,11 +5222,11 @@ object FMain: TFMain
       PictureAutoColor = False
       ParentFont = False
       TabOrder = 2
-      Version = '1.1.3.0'
+      Version = '1.1.4.0'
       OnClick = AdvMetroTile2Click
     end
     object btnExit: TButton
-      Left = 894
+      Left = 1096
       Top = 10
       Width = 75
       Height = 61
@@ -5247,7 +5245,7 @@ object FMain: TFMain
     BiDiMode = bdLeftToRight
     Images = ImageList1
     ParentBiDiMode = False
-    Version = '2.7.1.4'
+    Version = '2.7.1.8'
     Left = 32
     Top = 128
     object N1: TMenuItem
@@ -7165,5 +7163,9 @@ object FMain: TFMain
       E0000180003FF00003000000FC301FE0003FF00003000000FFFE3FFC003FFFFF
       FF000000FFFFFFFFFFFFFFFFFF00000000000000000000000000000000000000
       000000000000}
+  end
+  object FDPhysSQLiteDriverLink1: TFDPhysSQLiteDriverLink
+    Left = 904
+    Top = 324
   end
 end

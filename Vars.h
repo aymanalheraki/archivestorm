@@ -31,6 +31,9 @@
 #include <System.Contnrs.hpp>
 #include "iexLayers.hpp"
 #include "iexToolbars.hpp"
+#include "iexUserInteractions.hpp"
+#include "imageenio.hpp"
+#include "imageenproc.hpp"
 //---------------------------------------------------------------------------
 class TFVars : public TForm
 {

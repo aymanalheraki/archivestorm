@@ -12,7 +12,6 @@ object FTypes: TFTypes
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poMainFormCenter
   OnCreate = FormCreate
@@ -33,7 +32,6 @@ object FTypes: TFTypes
       Top = 11
       Width = 129
       Height = 19
-      DefaultHandling = True
       EmptyTextStyle = []
       ShowError = True
       ReturnIsTab = True
@@ -66,7 +64,7 @@ object FTypes: TFTypes
       TabOrder = 0
       Text = ''
       Visible = True
-      Version = '3.4.2.2'
+      Version = '4.0.1.3'
     end
     object btnSave: TAeroButton
       Left = 191
@@ -76,7 +74,7 @@ object FTypes: TFTypes
       ImageIndex = 1
       Images = ImageList1
       ImagePos = ipRight
-      Version = '1.0.0.1'
+      Version = '1.0.0.2'
       Caption = #1581#1601#1592
       Enabled = False
       TabOrder = 1
@@ -100,7 +98,7 @@ object FTypes: TFTypes
       Height = 28
       ImageIndex = 3
       Images = ImageList1
-      Version = '1.0.0.1'
+      Version = '1.0.0.2'
       Caption = 'Add New Type'
       TabOrder = 0
       OnClick = btnAddNewClick
@@ -112,7 +110,7 @@ object FTypes: TFTypes
       Height = 28
       ImageIndex = 2
       Images = ImageList1
-      Version = '1.0.0.1'
+      Version = '1.0.0.2'
       Caption = 'Cancel'
       TabOrder = 1
       OnClick = btnExitClick
@@ -123,7 +121,6 @@ object FTypes: TFTypes
     Top = 7
     Width = 261
     Height = 154
-    Cursor = crDefault
     BiDiMode = bdLeftToRight
     ColCount = 3
     Ctl3D = True
@@ -133,11 +130,9 @@ object FTypes: TFTypes
     ParentBiDiMode = False
     ParentCtl3D = False
     ParentShowHint = False
-    ScrollBars = ssBoth
     ShowHint = True
     TabOrder = 2
     OnClick = tSGClick
-    HoverRowCells = [hcNormal, hcSelected]
     OnGetCellCursor = tSGGetCellCursor
     OnDblClickCell = tSGDblClickCell
     HintShowCells = True
@@ -202,7 +197,6 @@ object FTypes: TFTypes
     FloatFormat = '%.2f'
     GridImages = ImageList1
     HoverButtons.Buttons = <>
-    HoverButtons.Position = hbLeftFromColumnLeft
     HTMLSettings.ImageFolder = 'images'
     HTMLSettings.ImageBaseName = 'img'
     Look = glStandard
@@ -246,9 +240,8 @@ object FTypes: TFTypes
     SelectionColor = clHighlight
     SelectionTextColor = clHighlightText
     ShowDesignHelper = False
-    SortSettings.DefaultFormat = ssAutomatic
     VAlignment = vtaCenter
-    Version = '8.2.4.1'
+    Version = '8.6.9.0'
     ColWidths = (
       64
       44
@@ -263,7 +256,7 @@ object FTypes: TFTypes
     Left = 37
     Top = 112
     Bitmap = {
-      494C010104000801680110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010104000801040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

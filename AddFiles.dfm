@@ -14,7 +14,6 @@ object FAddFiles: TFAddFiles
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poMainFormCenter
   OnCreate = FormCreate
@@ -83,7 +82,6 @@ object FAddFiles: TFAddFiles
     Top = 41
     Width = 784
     Height = 483
-    Cursor = crDefault
     Align = alClient
     BevelInner = bvNone
     BevelKind = bkFlat
@@ -105,7 +103,6 @@ object FAddFiles: TFAddFiles
     ParentDoubleBuffered = False
     ParentFont = False
     ParentShowHint = False
-    ScrollBars = ssBoth
     ShowHint = True
     TabOrder = 1
     OnClick = fileSGClick
@@ -114,7 +111,6 @@ object FAddFiles: TFAddFiles
     ActiveRowColor = 12369118
     GridLineColor = 15987699
     GridFixedLineColor = 15987699
-    HoverRowCells = [hcNormal, hcSelected]
     OnGetCellCursor = fileSGGetCellCursor
     OnGetAlignment = fileSGGetAlignment
     OnRowChanging = fileSGRowChanging
@@ -192,7 +188,6 @@ object FAddFiles: TFAddFiles
     HideFocusRect = True
     HoverButtons.Buttons = <>
     HoverButtons.Column = 10
-    HoverButtons.Position = hbLeftFromColumnLeft
     Hovering = True
     HTMLSettings.ImageFolder = 'images'
     HTMLSettings.ImageBaseName = 'img'
@@ -249,10 +244,9 @@ object FAddFiles: TFAddFiles
     SelectionMirrorColorTo = clHighlight
     ShowSelection = False
     ShowDesignHelper = False
-    SortSettings.DefaultFormat = ssAutomatic
     SyncGrid.ScrollVertical = True
     VAlignment = vtaCenter
-    Version = '8.5.11.0'
+    Version = '8.6.9.0'
     WordWrap = False
     ColWidths = (
       91
@@ -453,7 +447,7 @@ object FAddFiles: TFAddFiles
       Text = ''
       Visible = True
       OnKeyPress = txtArcSearchKeyPress
-      Version = '3.5.6.0'
+      Version = '4.0.1.3'
     end
   end
   object OpenImageEnDialog1: TOpenImageEnDialog

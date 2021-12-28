@@ -4,15 +4,14 @@ object FProcAdd: TFProcAdd
   BiDiMode = bdLeftToRight
   BorderStyle = bsDialog
   Caption = 'Add New Procedure'
-  ClientHeight = 294
-  ClientWidth = 551
+  ClientHeight = 298
+  ClientWidth = 549
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poMainFormCenter
   OnCreate = FormCreate
@@ -100,8 +99,10 @@ object FProcAdd: TFProcAdd
       Top = 64
       Width = 530
       Height = 152
+      BiDiMode = bdLeftToRight
       Ctl3D = False
       MaxLength = 1000
+      ParentBiDiMode = False
       ParentCtl3D = False
       ScrollBars = ssVertical
       TabOrder = 0
@@ -114,7 +115,7 @@ object FProcAdd: TFProcAdd
     Height = 28
     ImageIndex = 0
     Images = FMain.ImageList3
-    Version = '1.0.0.1'
+    Version = '1.0.0.2'
     Caption = 'Save'
     TabOrder = 1
     OnClick = btnSaveClick
@@ -126,7 +127,7 @@ object FProcAdd: TFProcAdd
     Height = 28
     ImageIndex = 2
     Images = ImageList3
-    Version = '1.0.0.1'
+    Version = '1.0.0.2'
     Caption = 'Exit'
     TabOrder = 2
     OnClick = btnExitClick
@@ -136,7 +137,7 @@ object FProcAdd: TFProcAdd
     Top = 8
     Width = 191
     Height = 21
-    BiDiMode = bdRightToLeft
+    BiDiMode = bdLeftToRight
     Style = csDropDownList
     ParentBiDiMode = False
     TabOrder = 3
@@ -145,7 +146,7 @@ object FProcAdd: TFProcAdd
     Left = 246
     Top = 253
     Bitmap = {
-      494C010103000800300110001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       00000000000000000000000000000000000000000000FAFAFA05ECECEC13E3E3
       E31CE2E2E21DE5E5E51AE9E9E916EEEEEE11F4F4F40BFBFBFB04FEFEFE010000

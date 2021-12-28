@@ -39,6 +39,11 @@
 #include <System.ImageList.hpp>
 #include "iexRulers.hpp"
 #include <System.Contnrs.hpp>
+#include "iexLayers.hpp"
+#include "iexToolbars.hpp"
+#include "iexUserInteractions.hpp"
+#include "imageenio.hpp"
+#include "imageenproc.hpp"
 //---------------------------------------------------------------------------
 class TFArcImages : public TForm
 {

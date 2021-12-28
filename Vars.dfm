@@ -12,7 +12,6 @@ object FVars: TFVars
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poMainFormCenter
   OnShow = FormShow
@@ -46,6 +45,10 @@ object FVars: TFVars
     FixedDimension = 19
     object TabSheet1: TRzTabSheet
       Caption = 'Print Setting'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       DesignSize = (
         588
         343)
@@ -145,7 +148,7 @@ object FVars: TFVars
             TabOrder = 0
             Text = ''
             Visible = True
-            Version = '3.5.6.0'
+            Version = '4.0.1.3'
           end
           object txtName2: TRzMemo
             Left = 8

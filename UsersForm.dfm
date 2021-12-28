@@ -12,7 +12,6 @@ object FUsersForm: TFUsersForm
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poMainFormCenter
   OnCreate = FormCreate
@@ -34,7 +33,6 @@ object FUsersForm: TFUsersForm
     Top = 29
     Width = 852
     Height = 288
-    Cursor = crDefault
     Align = alClient
     Color = clWhite
     ColCount = 7
@@ -42,7 +40,7 @@ object FUsersForm: TFUsersForm
     DoubleBuffered = True
     DrawingStyle = gdsGradient
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = clBlack
+    Font.Color = clWindowText
     Font.Height = -11
     Font.Name = 'Tahoma'
     Font.Style = []
@@ -50,12 +48,10 @@ object FUsersForm: TFUsersForm
     ParentCtl3D = False
     ParentDoubleBuffered = False
     ParentFont = False
-    ScrollBars = ssBoth
     TabOrder = 0
     OnClick = UsersSGClick
-    GridLineColor = 15987699
-    GridFixedLineColor = 15987699
-    HoverRowCells = [hcNormal, hcSelected]
+    GridLineColor = 15527152
+    GridFixedLineColor = 13947601
     OnGetCellCursor = UsersSGGetCellCursor
     OnDblClickCell = UsersSGDblClickCell
     ActiveCellFont.Charset = DEFAULT_CHARSET
@@ -121,7 +117,6 @@ object FUsersForm: TFUsersForm
     FloatFormat = '%.2f'
     GridImages = ImageList2
     HoverButtons.Buttons = <>
-    HoverButtons.Position = hbLeftFromColumnLeft
     HTMLSettings.ImageFolder = 'images'
     HTMLSettings.ImageBaseName = 'img'
     Look = glWin7
@@ -153,7 +148,8 @@ object FUsersForm: TFUsersForm
     PrintSettings.FooterFont.Style = []
     PrintSettings.PageNumSep = '/'
     ScrollBarAlways = saVert
-    SearchFooter.ColorTo = clWhite
+    SearchFooter.Color = 16645370
+    SearchFooter.ColorTo = 16247261
     SearchFooter.FindNextCaption = 'Find &next'
     SearchFooter.FindPrevCaption = 'Find &previous'
     SearchFooter.Font.Charset = DEFAULT_CHARSET
@@ -169,13 +165,12 @@ object FUsersForm: TFUsersForm
     SearchFooter.MatchCaseCaption = 'Match case'
     SearchFooter.ResultFormat = '(%d of %d)'
     ShowDesignHelper = False
-    SortSettings.DefaultFormat = ssAutomatic
     SortSettings.HeaderColor = 16579058
     SortSettings.HeaderColorTo = 16579058
     SortSettings.HeaderMirrorColor = 16380385
     SortSettings.HeaderMirrorColorTo = 16182488
     UIStyle = tsWindows7
-    Version = '8.5.11.0'
+    Version = '8.6.9.0'
     ColWidths = (
       64
       298
@@ -263,6 +258,7 @@ object FUsersForm: TFUsersForm
       Color = 15987699
       Ctl3D = True
       GroupStyle = gsBanner
+      ItemHeight = 17
       ParentCtl3D = False
       TabOrder = 0
       VisualStyle = vsGradient
@@ -276,7 +272,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Add and edit Variables'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkUsers: TAdvOfficeCheckBox
         Left = 19
@@ -288,7 +284,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Users and permissions Management'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcGroupAdd: TAdvOfficeCheckBox
         Left = 389
@@ -300,7 +296,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Add & Update Indexes'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcTypeAdd: TAdvOfficeCheckBox
         Left = 543
@@ -312,7 +308,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Add & Update Docs Types'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcAdd: TAdvOfficeCheckBox
         Left = 217
@@ -324,7 +320,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Add New Documents'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcEdit: TAdvOfficeCheckBox
         Left = 217
@@ -336,7 +332,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Edit Documents'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcImageAdd: TAdvOfficeCheckBox
         Left = 389
@@ -348,7 +344,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Add Attachement Files'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcImageDel: TAdvOfficeCheckBox
         Left = 389
@@ -360,7 +356,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Delete Attachement Files'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcProcAdd: TAdvOfficeCheckBox
         Left = 217
@@ -374,7 +370,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Add Procedures'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcPrint: TAdvOfficeCheckBox
         Left = 389
@@ -386,7 +382,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Report Print'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkChangePassword: TAdvOfficeCheckBox
         Left = 543
@@ -398,7 +394,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Change Password'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcDel: TAdvOfficeCheckBox
         Left = 217
@@ -410,7 +406,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Delete Documents'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkBackup: TAdvOfficeCheckBox
         Left = 19
@@ -422,7 +418,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Backup'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkRestore: TAdvOfficeCheckBox
         Left = 19
@@ -434,7 +430,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Restore'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkSecret: TAdvOfficeCheckBox
         Left = 543
@@ -446,7 +442,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Reveal Secret Docs'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkRepaire: TAdvOfficeCheckBox
         Left = 217
@@ -458,7 +454,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Compress & Maintain Database'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkPath: TAdvOfficeCheckBox
         Left = 543
@@ -470,7 +466,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'DataBase Directory Path'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object chkArcImageExport: TAdvOfficeCheckBox
         Left = 389
@@ -482,7 +478,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Export Attachement Files'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
       object RzPanel3: TRzPanel
         Left = 19
@@ -535,7 +531,7 @@ object FUsersForm: TFUsersForm
         Alignment = taLeftJustify
         Caption = 'Add & Edit Groups'
         ReturnIsTab = False
-        Version = '1.8.0.3'
+        Version = '1.8.1.0'
       end
     end
   end

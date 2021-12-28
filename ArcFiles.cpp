@@ -140,8 +140,8 @@ void __fastcall TFArcFiles::FillFileSG()
 
 	strS = strS + " WHERE addfiles.fileID=addfiles.fileID "	 + str0 + str1 + str2 + str3 + str4 + str5 + str6;
 
-	TLiteConnection *connDB = new TLiteConnection(NULL);
-	TLiteQuery *Q = SelectQ(strS,connDB);
+	TFDConnection *connDB = new TFDConnection(NULL);
+	TFDQuery *Q = SelectQ(strS,connDB);
 	SendMessage(fileSG->Handle, WM_SETREDRAW, FALSE, 0);
 	if(Q->RecordCount > 0)
 	{
@@ -209,8 +209,8 @@ void __fastcall TFArcFiles::fileSGDblClickCell(TObject *Sender, int ARow, int AC
 
 			AnsiString strSql = "Select * FROM addfiles WHERE fileID = " + fileSG->Cells[1][fileSG->Row];
 
-			TLiteConnection *connDB = new TLiteConnection(NULL);
-			TLiteQuery *stdQ = SelectQ(strSql,connDB);
+			TFDConnection *connDB = new TFDConnection(NULL);
+			TFDQuery *stdQ = SelectQ(strSql,connDB);
 
 			AnsiString vFileName = stdQ->FieldByName("fileName")->AsString.Trim();
 		  //  ShowMessage(vFileName);
@@ -271,8 +271,8 @@ void __fastcall TFArcFiles::fileSGDblClickCell(TObject *Sender, int ARow, int AC
 
 			AnsiString strSql = "Select * FROM addfiles WHERE fileID = " + fileSG->Cells[1][fileSG->Row];
 
-			TLiteConnection *connDB = new TLiteConnection(NULL);
-			TLiteQuery *stdQ = SelectQ(strSql,connDB);
+			TFDConnection *connDB = new TFDConnection(NULL);
+			TFDQuery *stdQ = SelectQ(strSql,connDB);
 
 			TStream *st1 = stdQ->CreateBlobStream((TBlobField *) stdQ->FieldByName("fileArc"),bmRead);
             st1->Position = 0;
