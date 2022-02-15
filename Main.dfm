@@ -3778,7 +3778,7 @@ object FMain: TFMain
       PictureAutoColor = False
       ParentFont = False
       TabOrder = 0
-      Version = '1.1.4.0'
+      Version = '1.1.5.0'
       OnClick = btnDocuManagementClick
     end
     object AdvMetroTile1: TAdvMetroTile
@@ -4505,7 +4505,7 @@ object FMain: TFMain
       PictureAutoColor = False
       ParentFont = False
       TabOrder = 1
-      Version = '1.1.4.0'
+      Version = '1.1.5.0'
       OnClick = AdvMetroTile1Click
     end
     object AdvMetroTile2: TAdvMetroTile
@@ -5222,7 +5222,7 @@ object FMain: TFMain
       PictureAutoColor = False
       ParentFont = False
       TabOrder = 2
-      Version = '1.1.4.0'
+      Version = '1.1.5.0'
       OnClick = AdvMetroTile2Click
     end
     object btnExit: TButton
