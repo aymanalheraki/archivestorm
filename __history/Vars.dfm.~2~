@@ -3,7 +3,7 @@ object FVars: TFVars
   Top = 0
   BiDiMode = bdLeftToRight
   BorderStyle = bsDialog
-  Caption = 'General Control'
+  Caption = #1573#1590#1575#1601#1577' '#1608' '#1578#1593#1583#1610#1604' '#1575#1604#1605#1578#1594#1610#1585#1575#1578
   ClientHeight = 366
   ClientWidth = 592
   Color = clBtnFace
@@ -45,6 +45,10 @@ object FVars: TFVars
     FixedDimension = 19
     object TabSheet1: TRzTabSheet
       Caption = 'Print Setting'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       DesignSize = (
         588
         343)

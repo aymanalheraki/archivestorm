@@ -27,7 +27,7 @@ TFDQuery* SelectQ(AnsiString strSql,TFDConnection *connDB)
 	 }
 	 catch(Exception *e)
 	 {
-		ShowMessage("There is a problem in connection with Database");
+		ShowMessage("Â‰«ﬂ „‘ﬂ·… »«·« ’«· »ﬁ«⁄œ… «·»Ì«‰« ");
 	 }
 	 return 0;
 }
@@ -59,7 +59,7 @@ long int CommandSQL(AnsiString strSql)
 	   }
 	   catch(Exception *e)
 	  {
-		ShowMessage("There is a problem in connection with Database");
+		ShowMessage("Â‰«ﬂ „‘ﬂ·… »«·« ’«· »ﬁ«⁄œ… «·»Ì«‰« ");
 	  }
       return 0;
 }
@@ -83,13 +83,13 @@ AnsiString CDateTime(AnsiString adate) {
 	AnsiString aHour = adate.SubString(9, 2);
 	AnsiString aMinute = adate.SubString(11, 2);
 	AnsiString aSecond = adate.SubString(13, 2);
-	AnsiString dStatus = "AM";
+	AnsiString dStatus = "’";
 	int h1 = aHour.ToInt();
 	if(aHour.ToInt() > 12)
 	{
 		h1 = aHour - 12;
 
-		dStatus = "PM";
+		dStatus = "„";
     }
 
 
@@ -463,7 +463,7 @@ int getLastID(AnsiString str1,AnsiString fName)
 // ----------------------------------------------------------------------------
 void ShowMessageA(UnicodeString str1)
 {
-	Application->MessageBoxA(str1.w_str(), L"Caution message",MB_ICONQUESTION);
+	Application->MessageBoxA(str1.w_str(), L"—”«·…  ‰»ÌÂ",MB_ICONQUESTION);
 }
 
 // -----------------------------------------------------------------------
@@ -478,7 +478,7 @@ void ComboFillA(TRzComboBox *aa, AnsiString strSQL, AnsiString item1,AnsiString 
 	{
 		if(a1 == true)
 		{
-			aa->AddItemValue("All", "0");
+			aa->AddItemValue("«·ﬂ·", "0");
 		}
 		for (int i = 0; i < Qcmb->RecordCount; i++)
 		{
@@ -502,7 +502,7 @@ void ComboFillB(TRzComboBox *aa, AnsiString strSQL, AnsiString item1,AnsiString 
 
 	if (Qcmb->RecordCount > 0) {
 		if (a1 == true) {
-			aa->AddItemValue("All", "0");
+			aa->AddItemValue("«·ﬂ·", "0");
 		}
 		for (int i = 0; i < Qcmb->RecordCount; i++) {
 			aa->AddItemValue(Qcmb->FieldByName(value1)->AsAnsiString + " - " +
