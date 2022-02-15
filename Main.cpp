@@ -87,7 +87,6 @@ void __fastcall TFMain::FormShow(TObject *Sender)
 
 	this->Caption = this->Caption + " " + programVer;
 	lblVer->Caption = "ArchiveStorm " + programVer;
-    // Demo to git
 	lblVer->Top = TopPanel->Height - 15;
 
 		DataFile = ExtractFilePath(Application->ExeName) +  "\\arcdata.db";
