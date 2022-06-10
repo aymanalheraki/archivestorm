@@ -4,15 +4,14 @@ object Fabout: TFabout
   BiDiMode = bdLeftToRight
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 403
-  ClientWidth = 619
+  ClientHeight = 587
+  ClientWidth = 747
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   ParentBiDiMode = False
   Position = poMainFormCenter
   OnCreate = FormCreate
@@ -20,7 +19,7 @@ object Fabout: TFabout
   PixelsPerInch = 96
   TextHeight = 13
   object RzLabel1: TRzLabel
-    Left = 344
+    Left = 408
     Top = 46
     Width = 181
     Height = 38
@@ -35,12 +34,12 @@ object Fabout: TFabout
     WordWrap = True
   end
   object lblVer: TRzLabel
-    Left = 427
+    Left = 487
     Top = 90
-    Width = 10
+    Width = 25
     Height = 19
     BiDiMode = bdLeftToRight
-    Caption = '1'
+    Caption = '2.0'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = 8421440
     Font.Height = -16
@@ -50,12 +49,12 @@ object Fabout: TFabout
     ParentFont = False
   end
   object RzLabel2: TRzLabel
-    Left = 147
-    Top = 381
+    Left = 191
+    Top = 563
     Width = 321
     Height = 16
     Alignment = taCenter
-    Caption = 'Copyright '#169' 2017 AstormSoft , Inc. All Rights Reserved.'
+    Caption = 'Copyright '#169' 2022 AstormSoft , Inc. All Rights Reserved.'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clGray
     Font.Height = -13
@@ -411,8 +410,8 @@ object Fabout: TFabout
   object RzGroupBox1: TRzGroupBox
     Left = 3
     Top = 136
-    Width = 611
-    Height = 242
+    Width = 742
+    Height = 421
     BannerHeight = 25
     BorderColor = clAppWorkSpace
     BorderInner = fsBump
@@ -428,8 +427,8 @@ object Fabout: TFabout
     object RV: TRzRichEdit
       Left = 3
       Top = 28
-      Width = 605
-      Height = 211
+      Width = 736
+      Height = 390
       Align = alClient
       Color = clInfoBk
       Font.Charset = ARABIC_CHARSET
@@ -437,11 +436,89 @@ object Fabout: TFabout
       Font.Height = -11
       Font.Name = 'Tahoma'
       Font.Style = []
+      Lines.Strings = (
+        
+          '                                                                ' +
+          '         LICENSED APPLICATION END USER LICENSE AGREEMENT'
+        
+          'ArchiveStorm Windows Application made available through the Enva' +
+          'to are licensed, not sold, to you. Your license to each App is s' +
+          'ubject to your prior '
+        
+          'acceptance of either this Licensed Application End User License ' +
+          'Agreement ('#8220'Standard EULA'#8221'), or a custom end user license agreem' +
+          'ent between you '
+        
+          'and the Application Provider ('#8220'Custom EULA'#8221'), if one is provided' +
+          '. , and your license to any Third Party App under this Standard ' +
+          'EULA or Custom '
+        
+          'EULA is granted by the Application Provider of that Third Party ' +
+          'App. Any App that is subject to this Standard EULA is referred t' +
+          'o herein as the '#8220'Licensed '
+        'Application.'#8221' '
+        
+          'a. Termination. This Standard EULA is effective until terminated' +
+          ' by you or Licensor. Your rights under this Standard EULA will t' +
+          'erminate automatically '
+        'if you fail to comply with any of its terms. '
+        
+          'b. External Services. The Licensed Application may enable access' +
+          ' to Licensor'#8217's and/or third-party services and websites (collect' +
+          'ively and individually, '
+        
+          '"External Services"). You agree to use the External Services at ' +
+          'your sole risk. Licensor is not responsible for examining or eva' +
+          'luating the content or '
+        
+          'accuracy of any third-party External Services, and shall not be ' +
+          'liable for any such third-party External Services. Data displaye' +
+          'd by any Licensed '
+        
+          'Application or External Service, including but not limited to fi' +
+          'nancial, medical and location information, is for general inform' +
+          'ational purposes only and '
+        
+          'is not guaranteed by Licensor or its agents. You will not use th' +
+          'e External Services in any manner that is inconsistent with the ' +
+          'terms of this Standard '
+        
+          'EULA or that infringes the intellectual property rights of Licen' +
+          'sor or any third party. You agree not to use the External Servic' +
+          'es to harass, abuse, stalk, '
+        
+          'threaten or defame any person or entity, and that Licensor is no' +
+          't responsible for any such use. External Services '
+        
+          'may not be available in all languages or in your Home Country, a' +
+          'nd may not be appropriate or available for use in any particular' +
+          ' location. To the '
+        
+          'extent you choose to use such External Services, you are solely ' +
+          'responsible for compliance with any applicable laws. Licensor re' +
+          'serves the right to '
+        'change, '
+        
+          'suspend, remove, disable or impose access restrictions or limits' +
+          ' on any External Services at any time without notice or liabilit' +
+          'y to you. '
+        
+          'c. NO WARRANTY: YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF ' +
+          'THE LICENSED APPLICATION IS AT YOUR SOLE RISK. TO THE '
+        'MAXIMUM '
+        
+          'EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSED APPLICATION AND' +
+          ' ANY SERVICES PERFORMED OR PROVIDED BY THE LICENSED '
+        
+          'APPLICATION ARE PROVIDED "AS IS" AND '#8220'AS AVAILABLE,'#8221' WITH ALL FA' +
+          'ULTS AND WITHOUT WARRANTY OF ANY KIND, AND LICENSOR HEREBY '
+        
+          'DISCLAIMS ALL WARRANTIES AND CONDITIONS WITH RESPECT TO THE LICE' +
+          'NSED APPLICATION AND ANY SERVICES, EITHER EXPRESS, IMPLIED, ')
       ParentFont = False
       ReadOnly = True
       ScrollBars = ssVertical
       TabOrder = 0
-      Zoom = 100
     end
   end
 end

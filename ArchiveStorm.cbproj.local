@@ -1,25 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899/12/30 00:00:00.000.411,D:\MyProjectsXE5\ArchiveStormAr\ArchiveStorm.cbproj=D:\MyProjectsXE5\ArchiveStormAr\ArchiveStormAr.cbproj</Transaction>
     <Transaction>1899/12/30 00:00:00.000.545,D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp=D:\MyProjectsXE5\ArchiveStorm\Unit1.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.102,D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.978,=D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.520,=D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.359,D:\MyProjectsXE5\ArchiveStormAr\ArchiveStormPCH1.h=D:\MyProjectsXE5\ArchiveStormAr\ArchiveStormArPCH1.h</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.983,=D:\MyProjectsXE5\ArchiveStorm\ArcImages.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.215,D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.411,D:\MyProjectsXE5\ArchiveStormAr\ArchiveStorm.cbproj=D:\MyProjectsXE5\ArchiveStormAr\ArchiveStormAr.cbproj</Transaction>
     <Transaction>1899/12/30 00:00:00.000.545,D:\MyProjectsXE5\ArchiveStorm\AddImages.h=D:\MyProjectsXE5\ArchiveStorm\Unit1.h</Transaction>
     <Transaction>1899/12/30 00:00:00.000.532,=D:\MyProjectsXE5\ArchiveStorm\UsersForm.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.932,=D:\MyProjectsXE5\ArchiveStorm\about.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.978,=D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.359,D:\MyProjectsXE5\ArchiveStormAr\ArchiveStormPCH1.h=D:\MyProjectsXE5\ArchiveStormAr\ArchiveStormArPCH1.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.160,D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp=</Transaction>
     <Transaction>1899/12/30 00:00:00.000.155,D:\MyProjectsXE5\ArchiveStormAr\smartapi.pas=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.558,=D:\MyProjectsXE5\ArchiveStormAr\smartapi.pas</Transaction>
     <Transaction>1899/12/30 00:00:00.000.343,D:\MyProjectsXE5\ArchiveStorm\Unit1.dfm=D:\MyProjectsXE5\ArchiveStorm\AddImages.dfm</Transaction>
     <Transaction>1899/12/30 00:00:00.000.856,=D:\MyProjectsXE5\ArchiveStorm\DateCorrection.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.343,D:\MyProjectsXE5\ArchiveStorm\Unit1.h=D:\MyProjectsXE5\ArchiveStorm\AddImages.h</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.160,D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.215,D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.364,=D:\MyProjectsXE5\ArchiveStorm\UsersEdit.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.558,=D:\MyProjectsXE5\ArchiveStormAr\smartapi.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.102,D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp=</Transaction>
     <Transaction>1899/12/30 00:00:00.000.477,=D:\MyProjectsXE5\ArchiveStorm\arcEdit.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.451,=D:\MyProjectsXE5\ArchiveStorm\publicf.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.343,D:\MyProjectsXE5\ArchiveStorm\Unit1.h=D:\MyProjectsXE5\ArchiveStorm\AddImages.h</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.983,=D:\MyProjectsXE5\ArchiveStorm\ArcImages.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.291,=D:\MyProjectsXE5\ArchiveStorm\UsersAdd.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.819,=D:\MyProjectsXE5\ArchiveStorm\loader.rc</Transaction>
     <Transaction>1899/12/30 00:00:00.000.427,=D:\MyProjectsXE5\ArchiveStorm\wait.cpp</Transaction>
@@ -34,45 +35,44 @@
     <Transaction>1899/12/30 00:00:00.000.574,=D:\MyProjectsXE5\ArchiveStormAr\magwmi.hpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.845,=D:\MyProjectsXE5\ArchiveStorm\ChangePassword.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.953,C:\Users\AymanNB\Documents\RAD Studio\Projects\Unit1.h=D:\MyProjectsXE5\ArchiveStorm\Main.h</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.914,=D:\MyProjectsXE5\ArchiveStormAr\magsubs1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.503,C:\Users\AymanNB\Documents\RAD Studio\Projects\Project1PCH1.h=D:\MyProjectsXE5\ArchiveStorm\ArchiveStormPCH1.h</Transaction>
     <Transaction>1899/12/30 00:00:00.000.518,=D:\MyProjectsXE5\ArchiveStormAr\magsubs1.pas</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.072,D:\MyProjectsXE5\ArchiveStormAr\magsubs1.pas=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.503,C:\Users\AymanNB\Documents\RAD Studio\Projects\Project1PCH1.h=D:\MyProjectsXE5\ArchiveStorm\ArchiveStormPCH1.h</Transaction>
     <Transaction>1899/12/30 00:00:00.000.847,D:\MyProjectsXE5\ArchiveStormAr\magsubs1.pas=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.364,=D:\MyProjectsXE5\ArchiveStorm\UsersEdit.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.683,=D:\MyProjectsXE5\ArchiveStormAr\AddFiles.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.618,=D:\MyProjectsXE5\ArchiveStorm\Group.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.851,=D:\MyProjectsXE5\ArchiveStorm\ImageShow.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.545,D:\MyProjectsXE5\ArchiveStorm\AddImages.dfm=D:\MyProjectsXE5\ArchiveStorm\Unit1.dfm</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.557,=D:\MyProjectsXE5\ArchiveStorm\Unit1.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.538,=D:\MyProjectsXE5\ArchiveStorm\Unit1.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.543,=D:\MyProjectsXE5\ArchiveStorm\Help.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.683,C:\Users\AymanNB\Documents\RAD Studio\Projects\Project1.cbproj=D:\MyProjectsXE5\ArchiveStorm\ArchiveStorm.cbproj</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.936,D:\MyProjectsXE5\ArchiveStormAr\magsubs1.hpp=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.587,=D:\MyProjectsXE5\ArchiveStormAr\smartapi.hpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.512,D:\MyProjectsXE5\ArchiveStormAr\smartapi.hpp=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.973,=D:\MyProjectsXE5\ArchiveStorm\Types.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.856,=D:\MyProjectsXE5\ArchiveStorm\login.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.072,D:\MyProjectsXE5\ArchiveStormAr\magsubs1.pas=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.914,=D:\MyProjectsXE5\ArchiveStormAr\magsubs1.pas</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.471,=D:\MyProjectsXE5\ArchiveStormAr\diskid32.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.366,=D:\MyProjectsXE5\ArchiveStorm\ProcAdd.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.276,=D:\MyProjectsXE5\ArchiveStorm\ArcPath.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.567,=D:\MyProjectsXE5\ArchiveStormAr\magsubs1.hpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.908,=D:\MyProjectsXE5\ArchiveStorm\LogReport.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.953,C:\Users\AymanNB\Documents\RAD Studio\Projects\Unit1.cpp=D:\MyProjectsXE5\ArchiveStorm\Main.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.666,=D:\MyProjectsXE5\ArchiveStorm\AlarmAdd.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.909,=D:\MyProjectsXE5\ArchiveStorm\ArcFiles.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.618,=D:\MyProjectsXE5\ArchiveStorm\Group.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.851,=D:\MyProjectsXE5\ArchiveStorm\ImageShow.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.973,=D:\MyProjectsXE5\ArchiveStorm\Types.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.543,=D:\MyProjectsXE5\ArchiveStorm\Help.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.683,C:\Users\AymanNB\Documents\RAD Studio\Projects\Project1.cbproj=D:\MyProjectsXE5\ArchiveStorm\ArchiveStorm.cbproj</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.683,=D:\MyProjectsXE5\ArchiveStormAr\AddFiles.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.545,D:\MyProjectsXE5\ArchiveStorm\AddImages.dfm=D:\MyProjectsXE5\ArchiveStorm\Unit1.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.856,=D:\MyProjectsXE5\ArchiveStorm\login.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.538,=D:\MyProjectsXE5\ArchiveStorm\Unit1.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.343,D:\MyProjectsXE5\ArchiveStorm\Unit1.cpp=D:\MyProjectsXE5\ArchiveStorm\AddImages.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.384,=D:\MyProjectsXE5\ArchiveStorm\ArcDesc.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.524,=D:\MyProjectsXE5\ArchiveStorm\ArcMain.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.234,=C:\Users\AymanNB\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.911,=C:\Users\AymanNB\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.384,=D:\MyProjectsXE5\ArchiveStorm\ArcDesc.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.953,C:\Users\AymanNB\Documents\RAD Studio\Projects\Unit1.dfm=D:\MyProjectsXE5\ArchiveStorm\Main.dfm</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.512,D:\MyProjectsXE5\ArchiveStormAr\smartapi.hpp=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.587,=D:\MyProjectsXE5\ArchiveStormAr\smartapi.hpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.567,=D:\MyProjectsXE5\ArchiveStormAr\magsubs1.hpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.936,D:\MyProjectsXE5\ArchiveStormAr\magsubs1.hpp=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.557,=D:\MyProjectsXE5\ArchiveStorm\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.969,D:\MyProjectsXE5\ArchiveStormAr\WbemScripting_TLB.hpp=</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.614,=D:\MyProjectsXE5\ArchiveStormAr\WbemScripting_TLB.hpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.158,D:\MyProjectsXE5\ArchiveStormAr\WbemScripting_TLB.pas=</Transaction>
     <Transaction>1899/12/30 00:00:00.000.951,=D:\MyProjectsXE5\ArchiveStormAr\WbemScripting_TLB.pas</Transaction>
     <Transaction>1899/12/30 00:00:00.000.972,=D:\MyProjectsXE5\ArchiveStorm\arcAdd.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.909,=D:\MyProjectsXE5\ArchiveStorm\ArcFiles.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.234,=C:\Users\AymanNB\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.911,=C:\Users\AymanNB\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.953,C:\Users\AymanNB\Documents\RAD Studio\Projects\Unit1.cpp=D:\MyProjectsXE5\ArchiveStorm\Main.cpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.666,=D:\MyProjectsXE5\ArchiveStorm\AlarmAdd.cpp</Transaction>
     <Transaction>1899/12/30 00:00:00.000.092,=D:\MyProjectsXE5\ArchiveStorm\Support.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.471,=D:\MyProjectsXE5\ArchiveStormAr\diskid32.cpp</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.953,C:\Users\AymanNB\Documents\RAD Studio\Projects\Unit1.dfm=D:\MyProjectsXE5\ArchiveStorm\Main.dfm</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.969,D:\MyProjectsXE5\ArchiveStormAr\WbemScripting_TLB.hpp=</Transaction>
-    <Transaction>1899/12/30 00:00:00.000.614,=D:\MyProjectsXE5\ArchiveStormAr\WbemScripting_TLB.hpp</Transaction>
+    <Transaction>1899/12/30 00:00:00.000.908,=D:\MyProjectsXE5\ArchiveStorm\LogReport.cpp</Transaction>
     <Transaction>2014/12/28 19:33:58.000.570,D:\MyProjectsXE7\ArchiveStorm\ArchiveStorm.cbproj=D:\MyProjectsXE7\ArchiveStorm\ArchiveStormAr.cbproj</Transaction>
     <Transaction>2014/12/28 19:33:58.000.532,D:\MyProjectsXE7\ArchiveStorm\ArchiveStormPCH1.h=D:\MyProjectsXE7\ArchiveStorm\ArchiveStormArPCH1.h</Transaction>
     <Transaction>2014/12/28 23:13:10.000.823,=D:\MyProjectsXE7\ArchiveStorm\File1.h</Transaction>
@@ -85,8 +85,11 @@
     <Transaction>2016/03/04 20:02:32.000.330,E:\MyProjects10\ArchiveStorm\publicf1.h=</Transaction>
     <Transaction>2016/03/05 12:33:39.000.862,E:\MyProjects10\ArchiveStorm\LogReport.cpp=</Transaction>
     <Transaction>2016/03/05 12:35:44.000.641,E:\MyProjects10\ArchiveStorm\ArcPath.cpp=</Transaction>
+    <Transaction>2022/02/21 05:16:59.000.281,=E:\MyProjects2018\ArchiveStorm2.0E\iphlpapi.lib</Transaction>
+    <Transaction>2022/02/21 05:20:03.000.950,E:\MyProjects2018\ArchiveStorm2.0E\iphlpapi.lib=</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="E:\winstore\aa.optset"/>
     <File Path="about.cpp"/>
     <File Path="about.cpp"/>
     <File Path="about.dfm"/>
@@ -199,4 +202,5 @@
     <File Path="wait.dfm"/>
     <File Path="wait.h"/>
   </ProjectSortOrder>
+	<BT_BuildType>Debug</BT_BuildType>
 </BorlandProject>

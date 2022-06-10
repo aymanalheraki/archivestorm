@@ -1337,6 +1337,7 @@ void Repaire()
   {
 	TFDConnection *connDB = new TFDConnection(NULL);
 	connDB->Params->Database = FMain->DataFile;
+	connDB->DriverName = "Sqlite";
 	connDB->Open();
 	connDB->ExecSQL("PRAGMA page_size=16384");
 	connDB->ExecSQL("VACUUM");
